@@ -1,0 +1,921 @@
+{
+    "menu": [
+        {
+            "title": "News",
+            "link": "news.html",
+            "class": "page-news"
+        },
+        {
+            "title": "On demand",
+            "link": "ondemand.html",
+            "class": "page-ondemand",
+            "subPages": [
+                {
+                    "title": "Events",
+                    "link": "events.html"
+                },
+                {
+                    "title": "Interviews",
+                    "link": "interviews.html"
+                },
+                {
+                    "title": "Hot news",
+                    "link": "hotnews.html"
+                },
+                {
+                    "title": "ICO channel",
+                    "link": "icochannel.html"
+                },
+                {
+                    "title": "Markets overview",
+                    "link": "markets-overview.html"
+                }
+            ]
+        },
+        {
+            "title": "Coins",
+            "link": "coins.html",
+            "class": "page-coins"
+        },
+        {
+            "title": "Markets",
+            "link": "markets.html",
+            "class": "page-markets"
+        },
+        {
+            "title": "ICOs",
+            "link": "icos.html",
+            "class": "page-icos"
+        },
+        {
+            "title": "ETFs",
+            "link": "etfs.html",
+            "class": "page-etfs"
+        }
+    ],
+    "menuLanding": [
+        "News",
+        "Events",
+        "Interviews",
+        "Program",
+        "Education",
+        "On demand"
+    ],
+    "videoList": [
+        {
+            "title": "The day after the ICO",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-01.jpg",
+            "time": "58:34",
+            "class": "is-faded"
+        },
+        {
+            "title": "Blockchain market overview",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-02.jpg",
+            "time": "58:34",
+            "class": "is-faded"
+        },
+        {
+            "title": "Interview with Ilan Tzorya",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-03.jpg",
+            "time": "58:34",
+            "class": "is-active",
+            "agenda": [
+                "Getting started",
+                "Setting up a paper wallet",
+                "Print the page",
+                "How does this work?",
+                "Adding funds to your cold storage wallet",
+                "Redeeming bitcoin from cold storage"
+            ]
+        },
+        {
+            "title": "The next Bitcoin",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-04.jpg",
+            "time": "58:34",
+            "class": ""
+        },
+        {
+            "title": "Conference overview",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-05.jpg",
+            "time": "58:34",
+            "class": ""
+        },
+        {
+            "title": "Interview with Ilan Tzorya",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-03.jpg",
+            "time": "58:34",
+            "class": ""
+        },
+        {
+            "title": "Blockchain market overview",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-02.jpg",
+            "time": "58:34",
+            "class": ""
+        },
+        {
+            "title": "Interview with Ilan Tzorya",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-03.jpg",
+            "time": "58:34",
+            "class": ""
+        },
+        {
+            "title": "The next Bitcoin",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-04.jpg",
+            "time": "58:34",
+            "class": ""
+        },
+        {
+            "title": "Conference overview",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-05.jpg",
+            "time": "58:34",
+            "class": ""
+        },
+        {
+            "title": "Interview with Ilan Tzorya",
+            "description": "Review and interview with the ICOs starting today",
+            "image": "video-thumb-03.jpg",
+            "time": "58:34",
+            "class": ""
+        }
+    ],
+    "sliderHome": [
+        {
+            "title": "ETH/BTC",
+            "perc": "-4.02%",
+            "number": "0.08",
+            "image": "./img/graph-01.svg",
+            "coin": "BTC",
+            "volume": "546 BTC"
+        },
+        {
+            "title": "LTC/EUR",
+            "perc": "-5,51%",
+            "number": "725.00",
+            "image": "./img/graph-02.svg",
+            "coin": "EUR",
+            "volume": "1,142 LTC"
+        },
+        {
+            "title": "LTC/EUR",
+            "perc": "-5,51%",
+            "number": "1200.00",
+            "image": "./img/graph-03.svg",
+            "coin": "USD",
+            "volume": "1,142 LTC"
+        },
+        {
+            "title": "LTC/EUR",
+            "perc": "-5,51%",
+            "number": "725.00",
+            "image": "./img/graph-02.svg",
+            "coin": "USD",
+            "volume": "1,142 LTC"
+        },
+        {
+            "title": "ETH/BTC",
+            "perc": "-4.02%",
+            "number": "0.08",
+            "image": "./img/graph-01.svg",
+            "coin": "BTC",
+            "volume": "546 BTC"
+        },
+        {
+            "title": "LTC/EUR",
+            "perc": "-5,51%",
+            "number": "725.00",
+            "image": "./img/graph-02.svg",
+            "coin": "EUR",
+            "volume": "1,142 LTC"
+        },
+        {
+            "title": "LTC/EUR",
+            "perc": "-5,51%",
+            "number": "1200.00",
+            "image": "./img/graph-03.svg",
+            "coin": "USD",
+            "volume": "1,142 LTC"
+        },
+        {
+            "title": "LTC/EUR",
+            "perc": "-5,51%",
+            "number": "725.00",
+            "image": "./img/graph-02.svg",
+            "coin": "USD",
+            "volume": "1,142 LTC"
+        }
+    ],
+    "sliderMarkets": [
+        {
+            "title": "Coinbase GDAX",
+            "image": "./img/samples/market-01.png",
+            "coins": "87",
+            "class": "with-line-aqua",
+            "icon": "check",
+            "volume": "$16,075,700,000",
+            "pairs": "264"
+        },
+        {
+            "title": "Bitfinex",
+            "image": "./img/samples/market-02.png",
+            "coins": "132",
+            "class": "with-line-aqua",
+            "icon": "check",
+            "volume": "$24,075,700,000",
+            "pairs": "387"
+        },
+        {
+            "title": "Kraken",
+            "image": "./img/samples/market-03.png",
+            "coins": "36",
+            "class": "with-line-red",
+            "icon": "times",
+            "volume": "$775,700,000",
+            "pairs": "84"
+        },
+        {
+            "title": "Bitstamp",
+            "image": "./img/samples/market-04.png",
+            "coins": "873",
+            "class": "with-line-aqua",
+            "icon": "check",
+            "volume": "$124,075,700,000",
+            "pairs": "499"
+        },
+        {
+            "title": "Coinbase GDAX",
+            "image": "./img/samples/market-01.png",
+            "coins": "87",
+            "class": "with-line-aqua",
+            "icon": "check",
+            "volume": "$16,075,700,000",
+            "pairs": "264"
+        },
+        {
+            "title": "Bitfinex",
+            "image": "./img/samples/market-02.png",
+            "coins": "132",
+            "class": "with-line-aqua",
+            "icon": "check",
+            "volume": "$24,075,700,000",
+            "pairs": "387"
+        },
+        {
+            "title": "Kraken",
+            "image": "./img/samples/market-03.png",
+            "coins": "36",
+            "class": "with-line-red",
+            "icon": "times",
+            "volume": "$775,700,000",
+            "pairs": "84"
+        },
+        {
+            "title": "Bitstamp",
+            "image": "./img/samples/market-04.png",
+            "coins": "873",
+            "class": "with-line-aqua",
+            "icon": "check",
+            "volume": "$124,075,700,000",
+            "pairs": "499"
+        }
+    ],
+    "sliderCoins": [
+        {
+            "icon": "./img/coins/bitcoin.svg",
+            "coin": "Bitcoin",
+            "direction": "up",
+            "title": "BTC/USD",
+            "perc": "+5,51%",
+            "class": "with-line-aqua",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/riple.svg",
+            "coin": "Riple",
+            "direction": "down",
+            "class": "with-line-red",
+            "title": "RPX/USD",
+            "perc": "-2,51%",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/litecoin.svg",
+            "coin": "Litecoin",
+            "direction": "down",
+            "class": "with-line-red",
+            "title": "RPX/USD",
+            "perc": "-2,51%",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/etherium.svg",
+            "coin": "Etherium",
+            "direction": "up",
+            "class": "with-line-aqua",
+            "title": "RPX/USD",
+            "perc": "+2,51%",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/bitcoin.svg",
+            "coin": "Bitcoin",
+            "direction": "up",
+            "class": "with-line-aqua",
+            "title": "BTC/USD",
+            "perc": "+5,51%",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/litecoin.svg",
+            "coin": "Litecoin",
+            "direction": "down",
+            "class": "with-line-red",
+            "title": "RPX/USD",
+            "perc": "-2,51%",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/bitcoin.svg",
+            "coin": "Bitcoin",
+            "direction": "up",
+            "title": "BTC/USD",
+            "perc": "+5,51%",
+            "class": "with-line-aqua",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/riple.svg",
+            "coin": "Riple",
+            "direction": "down",
+            "class": "with-line-red",
+            "title": "RPX/USD",
+            "perc": "-2,51%",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/litecoin.svg",
+            "coin": "Litecoin",
+            "direction": "down",
+            "class": "with-line-red",
+            "title": "RPX/USD",
+            "perc": "-2,51%",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/etherium.svg",
+            "coin": "Etherium",
+            "direction": "up",
+            "class": "with-line-aqua",
+            "title": "RPX/USD",
+            "perc": "+2,51%",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/bitcoin.svg",
+            "coin": "Bitcoin",
+            "direction": "up",
+            "class": "with-line-aqua",
+            "title": "BTC/USD",
+            "perc": "+5,51%",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        },
+        {
+            "icon": "./img/coins/litecoin.svg",
+            "coin": "Litecoin",
+            "direction": "down",
+            "class": "with-line-red",
+            "title": "RPX/USD",
+            "perc": "-2,51%",
+            "volume": "$ 16,007,549,000",
+            "price": "$ 93.12"
+        }
+    ],
+    "sliderIndices": [
+        {
+            "title": "Blockchain Infrastructure",
+            "direction": "down",
+            "value": "593.25",
+            "class": "with-line-red",
+            "index": "BIIX",
+            "volume": "$ 16,007,549,000",
+            "cap": "$ 269,203,662,829"
+        },
+        {
+            "title": "Financial services",
+            "direction": "up",
+            "value": "218.82",
+            "class": "with-line-aqua",
+            "index": "FSXI",
+            "volume": "$ 16,007,549,000",
+            "cap": "$ 269,203,662,829"
+        },
+        {
+            "title": "Healthcare",
+            "direction": "down",
+            "value": "2161.8",
+            "class": "with-line-red",
+            "index": "HCII",
+            "volume": "$ 16,007,549,000",
+            "cap": "$ 269,203,662,829"
+        },
+        {
+            "title": "Commerce",
+            "direction": "up",
+            "class": "with-line-aqua",
+            "value": "2153.7",
+            "index": "INCO",
+            "volume": "$ 16,007,549,000",
+            "cap": "$ 269,203,662,829"
+        },
+        {
+            "title": "Blockchain Infrastructure",
+            "direction": "down",
+            "value": "593.25",
+            "class": "with-line-red",
+            "index": "BIIX",
+            "volume": "$ 16,007,549,000",
+            "cap": "$ 269,203,662,829"
+        },
+        {
+            "title": "Financial services",
+            "direction": "up",
+            "value": "218.82",
+            "class": "with-line-aqua",
+            "index": "FSXI",
+            "volume": "$ 16,007,549,000",
+            "cap": "$ 269,203,662,829"
+        },
+        {
+            "title": "Healthcare",
+            "direction": "down",
+            "value": "2161.8",
+            "class": "with-line-red",
+            "index": "HCII",
+            "volume": "$ 16,007,549,000",
+            "cap": "$ 269,203,662,829"
+        },
+        {
+            "title": "Commerce",
+            "direction": "up",
+            "class": "with-line-aqua",
+            "value": "2153.7",
+            "index": "INCO",
+            "volume": "$ 16,007,549,000",
+            "cap": "$ 269,203,662,829"
+        }
+    ],
+    "sliderETFS": [
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Finance",
+            "fund": "$20M",
+            "token": "FINS",
+            "since": "oct. 2017",
+            "juris": "Germany"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Commerce & Advertising",
+            "fund": "$10M",
+            "token": "SIFT",
+            "since": "apr. 2016",
+            "juris": "Switzerland"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Governance",
+            "fund": "$50M",
+            "token": "TAAS",
+            "since": "apr. 2018",
+            "juris": "Malta"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Commerce & Advertising",
+            "fund": "$10M",
+            "token": "SIFT",
+            "since": "apr. 2016",
+            "juris": "Switzerland"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Finance",
+            "fund": "$20M",
+            "token": "FINS",
+            "since": "oct. 2017",
+            "juris": "Germany"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Commerce & Advertising",
+            "fund": "$10M",
+            "token": "SIFT",
+            "since": "apr. 2016",
+            "juris": "Switzerland"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Governance",
+            "fund": "$50M",
+            "token": "TAAS",
+            "since": "apr. 2018",
+            "juris": "Malta"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Commerce & Advertising",
+            "fund": "$10M",
+            "token": "SIFT",
+            "since": "apr. 2016",
+            "juris": "Switzerland"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Finance",
+            "fund": "$20M",
+            "token": "FINS",
+            "since": "oct. 2017",
+            "juris": "Germany"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Commerce & Advertising",
+            "fund": "$10M",
+            "token": "SIFT",
+            "since": "apr. 2016",
+            "juris": "Switzerland"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Governance",
+            "fund": "$50M",
+            "token": "TAAS",
+            "since": "apr. 2018",
+            "juris": "Malta"
+        },
+        {
+            "image": "./img/etfs/company-01.png",
+            "title": "Commerce & Advertising",
+            "fund": "$10M",
+            "token": "SIFT",
+            "since": "apr. 2016",
+            "juris": "Switzerland"
+        }
+    ],
+    "sliderICOS": [
+        {
+            "image": "./img/icos/crowd-wiz.png",
+            "title": "CrowdWiz",
+            "icon": "fa-check is-green",
+            "text": "I have hinted that I would often jerk poor Queequeg from between",
+            "equals": "100WIZ=0.0005BTC",
+            "endsin": "32 days",
+            "progress": "25%",
+            "finished": true
+        },
+        {
+            "image": "./img/icos/game-flip.png",
+            "title": "GameFlip",
+            "icon": "fa-times is-red",
+            "text": "I have hinted that I would often jerk poor Queequeg from between",
+            "equals": "100GFC=1ETH",
+            "endsin": "20 days",
+            "progress": "55%"
+        },
+        {
+            "image": "./img/icos/clear-coin.png",
+            "title": "ClearCoin",
+            "icon": "fa-check is-green",
+            "text": "I have hinted that I would often jerk poor Queequeg from between",
+            "equals": "100WIZ=0.0005BTC",
+            "endsin": "32 days",
+            "progress": "75%",
+            "finished": true
+        },
+        {
+            "image": "./img/icos/crowd-wiz.png",
+            "title": "CrowdWiz",
+            "icon": "fa-times is-red",
+            "text": "I have hinted that I would often jerk poor Queequeg from between",
+            "equals": "100WIZ=0.0005BTC",
+            "endsin": "32 days",
+            "progress": "15%"
+        },
+        {
+            "image": "./img/icos/crowd-wiz.png",
+            "title": "CrowdWiz",
+            "icon": "fa-times is-red",
+            "text": "I have hinted that I would often jerk poor Queequeg from between",
+            "equals": "100WIZ=0.0005BTC",
+            "endsin": "32 days",
+            "progress": "25%"
+        },
+        {
+            "image": "./img/icos/game-flip.png",
+            "title": "GameFlip",
+            "icon": "fa-times is-red",
+            "text": "I have hinted that I would often jerk poor Queequeg from between",
+            "equals": "100GFC=1ETH",
+            "endsin": "20 days",
+            "progress": "55%"
+        },
+        {
+            "image": "./img/icos/clear-coin.png",
+            "title": "ClearCoin",
+            "icon": "fa-times is-red",
+            "text": "I have hinted that I would often jerk poor Queequeg from between",
+            "equals": "100WIZ=0.0005BTC",
+            "endsin": "32 days",
+            "progress": "75%"
+        },
+        {
+            "image": "./img/icos/crowd-wiz.png",
+            "title": "CrowdWiz",
+            "icon": "fa-times is-red",
+            "text": "I have hinted that I would often jerk poor Queequeg from between",
+            "equals": "100WIZ=0.0005BTC",
+            "endsin": "32 days",
+            "progress": "15%"
+        }
+    ],
+    "sliderNews": [
+        {
+            "image": "./img/samples/video-thumb-02.jpg",
+            "title": "Hot News",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        },
+        {
+            "image": "./img/samples/video-thumb-01.jpg",
+            "title": "Hot News",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        },
+        {
+            "image": "./img/samples/video-thumb-02.jpg",
+            "title": "Hot News",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        },
+        {
+            "image": "./img/samples/video-thumb-03.jpg",
+            "title": "Hot News",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        },
+        {
+            "image": "./img/samples/video-thumb-02.jpg",
+            "title": "Hot News",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        },
+        {
+            "image": "./img/samples/video-thumb-01.jpg",
+            "title": "Hot News",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        },
+        {
+            "image": "./img/samples/video-thumb-02.jpg",
+            "title": "Hot News",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        },
+        {
+            "image": "./img/samples/video-thumb-03.jpg",
+            "title": "Hot News",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        }
+    ],
+    "sliderEvents": [
+        {
+            "image": "./img/samples/video-thumb-01.jpg",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        },
+        {
+            "image": "./img/samples/video-thumb-02.jpg",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        },
+        {
+            "image": "./img/samples/video-thumb-03.jpg",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        },
+        {
+            "image": "./img/samples/video-thumb-01.jpg",
+            "text": "I have hinted that I would often jerk poor Queequeg from between"
+        }
+    ],
+    "coinList": [
+        {
+            "icon": "/img/coins/bitcoin.svg",
+            "title": "Bitcoin Cash",
+            "value": "$2.54",
+            "perc": "-21.61%",
+            "class": "is-red"
+        },
+        {
+            "icon": "/img/coins/stelar.svg",
+            "title": "Stellar",
+            "value": "$101.19",
+            "perc": "-21.61%",
+            "class": "is-green"
+        },
+        {
+            "icon": "/img/coins/bcc.svg",
+            "title": "Bitcoin Cash",
+            "value": "$2.54",
+            "perc": "-12.16%",
+            "class": "is-red"
+        },
+        {
+            "icon": "/img/coins/monero.svg",
+            "title": "Monero",
+            "value": "$2.54",
+            "perc": "-21.61%",
+            "class": "is-red"
+        },
+        {
+            "icon": "/img/coins/dash.svg",
+            "title": "Dash",
+            "value": "$101.19",
+            "perc": "-21.61%",
+            "class": "is-green"
+        },
+        {
+            "icon": "/img/coins/bcc.svg",
+            "title": "Bitcoin Cash",
+            "value": "$2.54",
+            "perc": "-12.16%",
+            "class": "is-red"
+        },
+        {
+            "icon": "/img/coins/stelar.svg",
+            "title": "Stellar",
+            "value": "$101.19",
+            "perc": "-21.61%",
+            "class": "is-green"
+        },
+        {
+            "icon": "/img/coins/bcc.svg",
+            "title": "Bitcoin Cash",
+            "value": "$2.54",
+            "perc": "-12.16%",
+            "class": "is-red"
+        },
+        {
+            "icon": "/img/coins/monero.svg",
+            "title": "Monero",
+            "value": "$2.54",
+            "perc": "-21.61%",
+            "class": "is-red"
+        }
+    ],
+    "listNews": [
+        {
+            "image": "./img/samples/video-thumb-01.jpg",
+            "title": "The day after the ICO",
+            "cat": "Hot news",
+            "text": "The monkey-rope is found in all whalers; but it was only in the Pequod"
+        },
+        {
+            "image": "./img/samples/video-thumb-01.jpg",
+            "title": "The day after the ICO",
+            "cat": "Hot news",
+            "text": "The monkey-rope is found in all whalers; but it was only in the Pequod"
+        },
+        {
+            "image": "./img/samples/video-thumb-01.jpg",
+            "title": "The day after the ICO",
+            "cat": "Hot news",
+            "text": "The monkey-rope is found in all whalers; but it was only in the Pequod"
+        },
+        {
+            "image": "./img/samples/video-thumb-01.jpg",
+            "title": "The day after the ICO",
+            "cat": "Hot news",
+            "text": "The monkey-rope is found in all whalers; but it was only in the Pequod"
+        }
+    ],
+    "timeline": [
+        {
+            "date": "Mar 22, 2018",
+            "title": "TechNOVA: Blockchain Summit 2018",
+            "place": "London, UK",
+            "text": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency.",
+            "tooltip": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency.",
+            "img": "./img/sponsor-logo.png"
+        },
+        {
+            "date": "Mar 23, 2018",
+            "title": "Blockchain & Bitcoin Conference Tallinn SmileExpo",
+            "place": "London, UK",
+            "text": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency.",
+            "tooltip": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency."
+        },
+        {
+            "date": "Mar 24, 2018",
+            "title": "CryptoEconomy ICO Mumbai",
+            "place": "London, UK",
+            "text": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency.",
+            "tooltip": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency."
+        },
+        {
+            "date": "Mar 25, 2018",
+            "title": "TechNOVA: Blockchain Summit 2018",
+            "place": "London, UK",
+            "text": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency.",
+            "tooltip": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency."
+        },
+        {
+            "date": "Mar 26, 2018",
+            "title": "Blockchain & Bitcoin Conference Tallinn SmileExpo",
+            "place": "London, UK",
+            "text": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency.",
+            "tooltip": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency."
+        },
+        {
+            "date": "Mar 27, 2018",
+            "title": "CryptoEconomy ICO Mumbai",
+            "place": "London, UK",
+            "text": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency.",
+            "tooltip": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency."
+        },
+        {
+            "date": "Mar 28, 2018",
+            "title": "TechNOVA: Blockchain Summit 2018",
+            "place": "London, UK",
+            "text": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency.",
+            "tooltip": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency."
+        },
+        {
+            "date": "Mar 29, 2018",
+            "title": "Blockchain & Bitcoin Conference Tallinn SmileExpo",
+            "place": "London, UK",
+            "text": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency.",
+            "tooltip": "TechNOVA: Blockchain Summit 2018 will look across sectors at the latest innovations in distributed ledger technology. This Blockchain conference will bring in case studies from banking, insurance, energy, music, healthcare, trade finance and more. Prepare to discuss issues related to strategy, verifying provenance, disintermediation and peer-to-peer industries, data sharing, smart contracts and the future of cryptocurrency."
+        }
+    ],
+    "archiveVideos": [
+        {
+            "image": "./img/samples/video-thumb-05.png",
+            "title": "ICOs of the day",
+            "text": "Review and interview with the ICOs starting today",
+            "timer": "58:34"
+        },
+        {
+            "image": "./img/samples/video-thumb-05.png",
+            "title": "Blockchain market overview",
+            "text": "Daily overview of the market trends",
+            "timer": "32:28"
+        },
+        {
+            "image": "./img/samples/video-thumb-05.png",
+            "title": "How to Setup Bitcoin Cold Storage",
+            "text": "A quick guide on how to setup your own bitcoin cold storage",
+            "timer": "58:34"
+        },
+        {
+            "image": "./img/samples/video-thumb-05.png",
+            "title": "ICOs of the day",
+            "text": "Review and interview with the ICOs starting today",
+            "timer": "32:28"
+        },
+        {
+            "image": "./img/samples/video-thumb-05.png",
+            "title": "ICOs of the day",
+            "text": "Review and interview with the ICOs starting today",
+            "timer": "58:34"
+        },
+        {
+            "image": "./img/samples/video-thumb-05.png",
+            "title": "Blockchain market overview",
+            "text": "Daily overview of the market trends",
+            "timer": "32:28"
+        },
+        {
+            "image": "./img/samples/video-thumb-05.png",
+            "title": "How to Setup Bitcoin Cold Storage",
+            "text": "A quick guide on how to setup your own bitcoin cold storage",
+            "timer": "58:34"
+        },
+        {
+            "image": "./img/samples/video-thumb-05.png",
+            "title": "ICOs of the day",
+            "text": "Review and interview with the ICOs starting today",
+            "timer": "32:28"
+        }
+    ]
+}

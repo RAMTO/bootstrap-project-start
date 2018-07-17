@@ -1,0 +1,31 @@
+{
+  "name": "project-bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap project boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/grunt/bin/grunt build:dev && ./node_modules/grunt/bin/grunt",
+    "build-dev": "./node_modules/grunt/bin/grunt build:dev",
+    "build-prod": "./node_modules/grunt/bin/grunt build:prod-dev"
+  },
+  "author": "Martin Dobrev",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "1.0.3",
+    "grunt-autoprefixer": "3.0.4",
+    "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-cssmin": "2.2.1",
+    "grunt-contrib-htmlmin": "2.4.0",
+    "grunt-contrib-watch": "1.1.0",
+    "grunt-nunjucks-2-html": "2.2.0",
+    "grunt-sass": "3.0.1",
+    "load-grunt-tasks": "4.0.0",
+    "node-sass": "4.9.2"
+  },
+  "dependencies": {
+    "bootstrap": "4.1.2",
+    "jquery": "3.3.1",
+    "popper.js": "1.14.3"
+  }
+}
