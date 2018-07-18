@@ -1,9 +1,10 @@
 {
-    "seo": {
-        "title": "Site title",
+    "meta": {
+        "title": "Test title",
         "description": "Site description",
         "keywords": "Site keywords",
-        "author": "Site keywords"
+        "author": "Site keywords",
+        "favicon": "img/icons/favicon.png"
     },
     "fonts": [
         "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
