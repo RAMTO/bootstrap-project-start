@@ -106,7 +106,7 @@ module.exports = (grunt) => {
 
         watch: {
             data: {
-                files: 'src/data/**/*.json',
+                files: 'src/data/data.json',
                 tasks: ['nunjucks'],
             },
             templates: {
