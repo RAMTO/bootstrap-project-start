@@ -3,10 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Project title - {{ pageTitle }}</title>
+    <title>{{ seo.title }} - {{ pageTitle }}</title>
+    <meta name="description" content="{{ seo.description }}">
+    <meta name="keywords" content="{{ seo.keywords }}">
+    <meta name="author" content="{{ seo.author }}">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- <link rel="icon" href="img/icons/favicon.png"> -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    
+    {% for font in fonts %}
+    <link href="{{ font }}" rel="stylesheet">
+    {% endfor %}
+
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
     <script defer src="./fontawesome/js/fontawesome-all.js"></script>
 </head>
