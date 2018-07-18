@@ -1,0 +1,4 @@
+{
+    "primary":  "map-get($colors, 'medium-pink')",
+    "secondary":  "map-get($colors, 'medium-pink')"
+}
