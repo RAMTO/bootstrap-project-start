@@ -1,28 +1,21 @@
 // Colors 
-$azul: #106cea;
-$bright-sky-blue: #00baff;
-$medium-pink: #ef4687;
-$aquamarine: #00dea6;
-$iris: #5e47b1;
+$azul:                  #106cea;
+$bright-sky-blue:       #00baff;
+$medium-pink:           #ef4687;
+$aquamarine:            #00dea6;
+$iris:                  #5e47b1;
 
+$primary:               $azul;
+$secondary:             $bright-sky-blue;
+$success:               $aquamarine;
+$danger:                $medium-pink;
+$info:                  $iris;
+
+// Optional - Map for root css variables
 $colors: (
-    azul: $azul,
-    bright-sky-blue: $bright-sky-blue,
-    medium-pink: $medium-pink,
-    aquamarine: $aquamarine,
-    iris: $iris
-);
-
-$primary: $azul;
-$secondary: $bright-sky-blue;
-$success: $aquamarine;
-$danger: $medium-pink;
-$info: $iris;
-
-$theme-colors: (
-    primary: $primary,
-    secondary: $secondary,
-    success: $success,
-    danger: $danger,
-    info: $info
+    azul:               $azul,
+    bright-sky-blue:    $bright-sky-blue,
+    medium-pink:        $medium-pink,
+    aquamarine:         $aquamarine,
+    iris:               $iris
 );
