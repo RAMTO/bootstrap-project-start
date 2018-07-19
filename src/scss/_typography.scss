@@ -1,0 +1,96 @@
+// Typography
+
+// Config
+$sizes: (
+  mega-device:      40px,
+  mega:             64px,
+  jumbo-device:     36px,
+  jumbo:            46px,
+  display-device:   26px,
+  display:          36px,
+  headline-device:  24px,
+  headline:         24px,
+  title-device:     20px,
+  title:            20px,
+  subheader-device: 18px,
+  subheader:        18px
+);
+
+// $sizes-deep: (
+//   mega: (
+//     device:         40px,
+//     desktop:        64px
+//   )
+// );
+
+// Mixins and functions
+@mixin text() {
+  color: color('gray-dark');
+  font-weight: normal;
+
+  &.is-light {
+    color: color('gray');
+  }
+
+  &.is-bold {
+    font-weight: bold;
+  }
+
+  &.is-upper {
+    text-transform: uppercase;
+  }
+}
+
+@function sizes($key) {
+  @return map-get($sizes, $key);
+}
+
+// @function sizes-deep-get($keys...) {
+//   @each $key in $keys {
+//     $sizes-deep: map-get($sizes-deep, $key);
+//   }
+//   @return $sizes-deep;
+// }
+
+// Classes
+.text-mega {
+  @include text;
+
+  font-size: sizes('mega-device');
+  // font-size: sizes-deep-get('mega', 'device');
+
+  @include media-breakpoint-up(md) {
+    // font-size: sizes-deep-get('mega', 'desktop');
+    font-size: sizes('mega');
+  }
+}
+
+.text-jumbo {
+  @include text;
+
+  font-size: sizes('jumbo');
+}
+
+.text-display {
+  @include text;
+
+  font-size: sizes('display');
+}
+
+.text-headline {
+  @include text;
+
+  font-size: sizes('headline');
+}
+
+.text-title {
+  @include text;
+
+  font-size: sizes('title');
+}
+
+.text-subheader {
+  @include text;
+
+  font-size: sizes('subheader');
+}
