@@ -1,8 +1,6 @@
 // Typography
 
 // Config
-$font-family-primary: 'Roboto';
-
 $sizes: (
   mega-device:      40px,
   mega:             64px,
@@ -36,6 +34,7 @@ $texts: (
 
 // Mixins and functions
 @mixin text() {
+  font-family: $font-family-primary;
   color: color('gray-dark');
   font-weight: normal;
 

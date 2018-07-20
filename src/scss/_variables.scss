@@ -32,3 +32,9 @@ $colors: (
     aquamarine:         $aquamarine,
     iris:               $iris
 );
+
+// Typography
+$font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 'Segoe UI Symbol';
+$font-family-secondary: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 'Segoe UI Symbol';
+
+$font-family-base: $font-family-secondary;
