@@ -1,111 +1,29 @@
 // Typography
 
-// Config
-$sizes: (
-  mega-device:      40px,
-  mega:             64px,
-  jumbo-device:     36px,
-  jumbo:            46px,
-  display-device:   26px,
-  display:          36px,
-  headline-device:  24px,
-  headline:         24px,
-  title-device:     20px,
-  title:            20px,
-  subheader-device: 18px,
-  subheader:        18px
-);
-
-$sizes-deep: (
-  mega: (
-    device:         40px,
-    desktop:        64px
-  )
-);
-
-$texts: (
-  mega: (
-    fs-device: 40px,
-    fs-desktop: 64px,
-    lh-device: 1.3,
-    lh-desktop: 1.1,
-  )
-);
-
 // Mixins and functions
 @mixin text() {
   font-family: $font-family-primary;
   color: color('gray-dark');
   font-weight: normal;
-
-  &.is-light {
-    color: color('gray');
-  }
-
-  &.is-bold {
-    font-weight: bold;
-  }
-
-  &.is-upper {
-    text-transform: uppercase;
-  }
 }
 
-@function sizes($key) {
-  @return map-get($sizes, $key);
+@function texts-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
 }
-
-@function sizes-deep($key, $type) {
-  $inner-map: map-get($sizes-deep, $key);
-  @return map-get($inner-map, $type);
-}
-
-// @function sizes-deep-get($keys...) {
-//   @each $key in $keys {
-//     $sizes-deep: map-get($sizes-deep, $key);
-//   }
-//   @return $sizes-deep;
-// }
 
 // Classes
-.text-mega {
-  @include text;
+@each $size in map-keys($texts) {
+  .text-#{$size} {
+    @include text;
+    font-size: texts-deep-get($texts, $size, 'default', 'font-size');
+    line-height: texts-deep-get($texts, $size, 'default', 'line-height');
 
-  // font-size: sizes('mega-device');
-  font-size: sizes-deep('mega', 'device');
-
-  @include media-breakpoint-up(md) {
-    font-size: sizes-deep('mega', 'desktop');
-    // font-size: sizes('mega');
+    @include media-breakpoint-up(md) {
+      font-size: texts-deep-get($texts, $size, 'md', 'font-size');
+      line-height: texts-deep-get($texts, $size, 'md', 'line-height');
+    }
   }
-}
-
-.text-jumbo {
-  @include text;
-
-  font-size: sizes('jumbo');
-}
-
-.text-display {
-  @include text;
-
-  font-size: sizes('display');
-}
-
-.text-headline {
-  @include text;
-
-  font-size: sizes('headline');
-}
-
-.text-title {
-  @include text;
-
-  font-size: sizes('title');
-}
-
-.text-subheader {
-  @include text;
-
-  font-size: sizes('subheader');
 }
