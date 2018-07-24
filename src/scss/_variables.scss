@@ -1,22 +1,20 @@
-// Colors 
+// Colors
 $azul:                  #106cea;
 $bright-sky-blue:       #00baff;
 $medium-pink:           #ef4687;
 $aquamarine:            #00dea6;
 $iris:                  #5e47b1;
+$gray:                  #6c757d;
 
-/**********************************
- * Bootsrtap default theme colors * 
- **********************************
-    $primary:       $blue !default;
-    $secondary:     $gray-600 !default;
-    $success:       $green !default;
-    $info:          $cyan !default;
-    $warning:       $yellow !default;
-    $danger:        $red !default;
-    $light:         $gray-100 !default;
-    $dark:          $gray-800 !default;
-**********************************/
+// Bootsrtap default theme colors
+//  $primary:       $blue !default;
+//  $secondary:     $gray-600 !default;
+//  $success:       $green !default;
+//  $info:          $cyan !default;
+//  $warning:       $yellow !default;
+//  $danger:        $red !default;
+//  $light:         $gray-100 !default;
+//  $dark:          $gray-800 !default;
 
 $primary:               $azul;
 $secondary:             $bright-sky-blue;
@@ -24,11 +22,85 @@ $success:               $aquamarine;
 $danger:                $medium-pink;
 $info:                  $iris;
 
+// Add custom colors to theme-colors map
+$theme-colors: (
+  light: $gray
+);
+
 // Optional - Map for root css variables
 $colors: (
-    azul:               $azul,
-    bright-sky-blue:    $bright-sky-blue,
-    medium-pink:        $medium-pink,
-    aquamarine:         $aquamarine,
-    iris:               $iris
+  azul:               $azul,
+  bright-sky-blue:    $bright-sky-blue,
+  medium-pink:        $medium-pink,
+  aquamarine:         $aquamarine,
+  iris:               $iris
+);
+
+// Typography
+$font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 'Segoe UI Symbol';
+$font-family-secondary: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 'Segoe UI Symbol';
+
+$font-family-base: $font-family-secondary;
+
+$texts: (
+  mega: (
+    default: (
+      font-size:    40px,
+      line-height:  1.2
+    ),
+    md: (
+      font-size:    64px,
+      line-height:  1.1
+    )
+  ),
+  jumbo: (
+    default: (
+      font-size:    36px,
+      line-height:  1.2
+    ),
+    md: (
+      font-size:    46px,
+      line-height:  1.1
+    )
+  ),
+  display: (
+    default: (
+      font-size:    26px,
+      line-height:  1.2
+    ),
+    md: (
+      font-size:    36px,
+      line-height:  1.1
+    )
+  ),
+  headline: (
+    default: (
+      font-size:    22px,
+      line-height:  1.2
+    ),
+    md: (
+      font-size:    24px,
+      line-height:  1.1
+    )
+  ),
+  title: (
+    default: (
+      font-size:    20px,
+      line-height:  1.2
+    ),
+    md: (
+      font-size:    22px,
+      line-height:  1.1
+    )
+  ),
+  subheader: (
+    default: (
+      font-size:    18px,
+      line-height:  1.2
+    ),
+    md: (
+      font-size:    20px,
+      line-height:  1.1
+    )
+  )
 );

@@ -1,0 +1,29 @@
+// Typography
+
+// Mixins and functions
+@mixin text() {
+  font-family: $font-family-primary;
+  color: color('gray-dark');
+  font-weight: normal;
+}
+
+@function texts-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+// Classes
+@each $size in map-keys($texts) {
+  .text-#{$size} {
+    @include text;
+    font-size: texts-deep-get($texts, $size, 'default', 'font-size');
+    line-height: texts-deep-get($texts, $size, 'default', 'line-height');
+
+    @include media-breakpoint-up(md) {
+      font-size: texts-deep-get($texts, $size, 'md', 'font-size');
+      line-height: texts-deep-get($texts, $size, 'md', 'line-height');
+    }
+  }
+}
