@@ -19,20 +19,12 @@ Use [NVM](https://github.com/creationix/nvm) to upgade Node.js verion if needed.
 
 After cloning the project, install dependencies running:
 
-`yarn`
-
-or
-
-`npm install`
+`yarn` or `npm install`
 
 
-To strat project:
+To start project:
 
-`yarn start`
-
-or 
-
-`npm start`
+`yarn start` or  `npm start`
 
 ## Step by step guide
 
