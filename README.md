@@ -2,11 +2,11 @@
 
 _Bootstrap project start_ is a data driven boilerplate for fast and easy project start.
 
-## Getting Started 
+## Getting Started
 
 ### Prerequisites
 
-At least version 8 of Node.js is required for project usage. 
+At least version 8 of Node.js is required for project usage.
 Check your current Node.js version with:
 
 ```
@@ -36,3 +36,4 @@ The project is data driven, so most of the configuration will be made in _.json_
 ### SCSS variables
 * Colors
 * Typography
+* Grid
