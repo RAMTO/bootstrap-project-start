@@ -1,0 +1,6 @@
+// Buttons
+.btn {
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  text-transform: uppercase;
+  box-shadow: 0 15px 20px 0 rgba(59, 56, 73, 0.2);
+}
