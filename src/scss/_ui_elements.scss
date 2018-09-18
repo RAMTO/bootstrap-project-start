@@ -4,3 +4,49 @@
   text-transform: uppercase;
   box-shadow: 0 15px 20px 0 rgba(59, 56, 73, 0.2);
 }
+
+// Tables
+.table {
+  margin-bottom: 0;
+
+  td, th {
+    padding: 4px 12px;
+    border-top: 1px solid $steel;
+
+    @include media-breakpoint-up(md) {
+      padding: 8px 24px;
+    }
+  }
+
+  th {
+    border-top: 0;
+  }
+}
+
+.table-hover {
+  tbody {
+    tr {
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    .row-gray {
+      &:hover {
+        background-color: $light;
+      }
+    }
+  }
+}
+
+.cell-numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+.row-gray {
+  background-color: $light;
+
+  td {
+    border-top: 0;
+  }
+}
