@@ -1,5 +1,6 @@
 const gruntTask = require('load-grunt-tasks')
 const sass = require('node-sass')
+const imageminPngquant = require('imagemin-pngquant')
 
 module.exports = (grunt) => {
   gruntTask(grunt)
@@ -37,7 +38,12 @@ module.exports = (grunt) => {
         src: '**/*.{png,jpg,gif,ico,svg}',
         dest: 'dist/img/'
       },
-      font: { expand: true, cwd: 'src/', src: ['fontawesome/**'], dest: 'dist/' }
+      fonts: {
+        expand: true,
+        cwd: 'src/fonts/',
+        src: '**/*.{ttf,otf,woff,woff2}',
+        dest: 'dist/fonts/'
+      }
     },
 
     nunjucks: {
@@ -81,8 +87,8 @@ module.exports = (grunt) => {
     htmlmin: {
       dist: {
         options: {
-          removeComments: true
-          // collapseWhitespace: true,
+          removeComments: true,
+          collapseWhitespace: true
         },
         files: [{
           expand: true,
@@ -100,6 +106,21 @@ module.exports = (grunt) => {
           cwd: 'dist/css',
           src: ['*.css'],
           dest: 'dist/css'
+        }]
+      }
+    },
+
+    imagemin: {
+      dynamic: {
+        options: {
+          optimizationLevel: 3,
+          use: [imageminPngquant({ quality: 80 })]
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'dist/'
         }]
       }
     },
@@ -129,7 +150,7 @@ module.exports = (grunt) => {
 
   })
 
-  grunt.registerTask('common_prod', ['htmlmin', 'cssmin'])
+  grunt.registerTask('common_prod', ['htmlmin', 'cssmin', 'imagemin'])
 
   grunt.registerTask('build:prod', ['nunjucks', 'copy', 'sass', 'autoprefixer', 'common_prod'])
   grunt.registerTask('build:dev', ['nunjucks', 'copy', 'sass', 'autoprefixer'])
