@@ -11,26 +11,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="{{ meta.favicon }}">
 
+    <link rel="preload" href="fonts/googlesans-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/googlesans-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/googlesans-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
     {% for font in fonts %}
     <link href="{{ font }}" rel="stylesheet">
     {% endfor %}
 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
-    <script defer src="./fontawesome/js/fontawesome-all.js"></script>
 </head>
 
 <body class="{{ pageClass }}">
 
-    <div class="container">
+  {% block content %}
+  {% endblock %}
 
-        {% include "partials/_menu.njk" %}
-
-        {% block content %}
-        {% endblock %}
-
-    </div>
-
-    <script src="js/script.js"></script>
+  <script src="js/yall.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,27 @@
-// Typography
+// Fonts
+@font-face {
+  font-family: 'Google Sans';
+  src: url('../fonts/googlesans-bold-webfont.woff2') format('woff2'),
+        url('../fonts/googlesans-bold-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('../fonts/googlesans-medium-webfont.woff2') format('woff2'),
+        url('../fonts/googlesans-medium-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('../fonts/googlesans-regular-webfont.woff2') format('woff2'),
+        url('../fonts/googlesans-regular-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+}
 
 // Mixins and functions
 @mixin text() {
@@ -27,3 +50,5 @@
     }
   }
 }
+
+// Custom styles

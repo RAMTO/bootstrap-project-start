@@ -50,3 +50,84 @@
     border-top: 0;
   }
 }
+
+// Forms
+.form-row {
+  margin-right: -12px;
+  margin-left: -12px;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+.form-control {
+  font-size: 1rem;
+  padding-top: 22px;
+  padding-bottom: 14px;
+
+  &:focus {
+    &,
+    &.is-invalid {
+      box-shadow: none;
+    }
+  }
+}
+
+textarea.form-control {
+  line-height: 1.4;
+}
+
+.custom-label {
+  color: $white;
+  font-size: 1rem;
+  position: absolute;
+  left: 34px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: 0;
+  transition: transform 0.2s;
+}
+
+.form-control:focus + .custom-label,
+.form-control:valid + .custom-label {
+  transform: scale(0.75) translateY(-160%);
+  color: $gray;
+}
+
+.custom-select-wrapper {
+  position: relative;
+
+  .custom-select {
+    background-image: none;
+    border: 2px solid $white;
+    border-radius: 0;
+    padding: 16px 22px;
+    height: auto;
+    font-size: 1rem;
+
+    &:focus {
+      box-shadow: none;
+      border-color: $primary;
+    }
+  }
+
+  &:after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: normal;
+    font-size: 14px;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translate(-50%, -50%);
+    color: $white;
+  }
+}

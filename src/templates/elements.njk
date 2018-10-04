@@ -5,11 +5,11 @@
 
 {% block content %}
 
-  <div class="pt-5">
+  <div class="container pt-5">
 
-    <h1 class="mb-5">Elements page</h1>
+    <h1 class="text-mega mb-10">Elements page</h1>
 
-    <h3 class="mb-3">Colors</h3>
+    <h3 class="text-headline mb-3">Colors</h3>
 
     <div class="p-3 mb-2 bg-primary text-white">Primary</div>
     <div class="p-3 mb-2 bg-secondary text-white">Secondary</div>
@@ -18,25 +18,74 @@
     <div class="p-3 mb-2 bg-warning text-dark">Warning</div>
     <div class="p-3 mb-2 bg-info text-white">Info</div>
 
-    <h3 class="mb-3 mt-5">Typography</h3>
+    <h3 class="text-headline mb-3 mt-8">Typography</h3>
 
-    <h1 class="text-mega">Responsive mega</h1>
-    <h1 class="text-mega text-light">Responsive mega light</h1>
-    <h1 class="text-mega font-weight-bold">Responsive mega bold</h1>
-    <h2 class="text-jumbo">Responsive jumbo</h2>
-    <h2 class="text-jumbo text-light">Responsive jumbo light</h2>
-    <h2 class="text-jumbo font-weight-bold">Responsive jumbo bold</h2>
-    <h3 class="text-display">Responsive display</h3>
-    <h3 class="text-display font-weight-bold">Responsive display bold</h3>
-    <h4 class="text-headline">Responsive headline</h4>
-    <h4 class="text-headline font-weight-bold">Responsive headline bold</h4>
-    <h5 class="text-title">Responsive title</h5>
-    <h5 class="text-title font-weight-bold">Responsive title bold</h5>
-    <h6 class="text-subheader">Responsive subheader</h6>
-    <h6 class="text-subheader text-uppercase">Responsive subheader uppercase</h6>
-    <h6 class="text-subheader font-weight-bold">Responsive subheader bold</h6>
+    <div class="mb-4">
+      <div class="d-flex align-items-center">
+        <h1 class="text-mega mr-4">Text mega</h1>
+        <p class="text-light">32px / 60px</p>
+      </div>
+      <p class="small mt-2 text-light">Used for projects and page title</p>
+    </div>
 
-    <p class="mb-3"></p>
+    <div class="mb-4">
+      <div class="d-flex align-items-center">
+        <h2 class="text-display mr-4">Text display</h2>
+        <p class="text-light">32px / 45px</p>
+      </div>
+      <p class="small mt-2 text-light">Used for home page title and section titles</p>
+    </div>
+
+    <div class="mb-4">
+      <div class="d-flex align-items-center">
+        <h3 class="text-headline mr-4">Text headline</h3>
+        <p class="text-light">26px / 32px</p>
+      </div>
+      <p class="small mt-2 text-light">Used for home page subtitle only</p>
+    </div>
+
+    <div class="mb-4">
+      <div class="d-flex align-items-center">
+        <h4 class="text-title mr-4">Text title</h4>
+        <p class="text-light">20px / 32px</p>
+      </div>
+      <p class="small mt-2 text-light">Used for studio page body texts</p>
+    </div>
+
+    <div class="mb-4">
+      <div class="d-flex align-items-center">
+        <h5 class="text-subheader mr-4">Text subheader</h5>
+        <p class="text-light">32px / 32px</p>
+      </div>
+      <p class="small mt-2 text-light">Used for project titles and in studio page as cycles title</p>
+    </div>
+
+    <div class="mb-4">
+      <div class="d-flex align-items-center">
+        <p class="mr-4">Text body</p>
+        <p class="text-light">20px / 20px</p>
+      </div>
+      <p class="small mt-2 text-light">Used for body text as project descriptions</p>
+    </div>
+
+    <div class="mb-4">
+      <div class="d-flex align-items-center">
+        <p class="small mr-4">Text small</p>
+        <p class="text-light">16px / 16px</p>
+      </div>
+      <p class="small mt-2 text-light">Used for body text as project descriptions</p>
+    </div>
+
+    <div class="mb-4">
+      <div class="d-flex align-items-center">
+        <p class="text-micro mr-4">Text micro</p>
+        <p class="text-light">14px / 14px</p>
+      </div>
+      <p class="small mt-2 text-light">Used for body text as project descriptions</p>
+    </div>
+
+
+    {# <p class="mb-6"></p>
 
     <p class="lead">
       Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
@@ -74,10 +123,8 @@
     <button type="button" class="btn btn-outline-light">Light</button>
     <button type="button" class="btn btn-outline-dark">Dark</button>
 
-    <p class="mb-3"></p>
-
+    <p class="mb-3"></p> #}
   </div>
 
-  <a class="btn btn-link" href="/">Back to home</a>
 
 {% endblock %}
