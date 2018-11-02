@@ -38,12 +38,19 @@ module.exports = (grunt) => {
         src: '**/*.{png,jpg,gif,ico,svg}',
         dest: 'dist/img/'
       },
+      css: {
+        expand: true,
+        cwd: 'src/css/',
+        src: '**/*.css',
+        dest: 'dist/css'
+      },
       fonts: {
         expand: true,
         cwd: 'src/fonts/',
         src: '**/*.{ttf,otf,woff,woff2}',
         dest: 'dist/fonts/'
-      }
+      },
+      fontawesome: { expand: true, cwd: 'src/', src: ['webfonts/**'], dest: 'dist' }
     },
 
     nunjucks: {
