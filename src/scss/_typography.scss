@@ -26,7 +26,6 @@
 // Mixins and functions
 @mixin text() {
   font-family: $font-family-primary;
-  color: color('gray-dark');
   font-weight: normal;
 }
 
