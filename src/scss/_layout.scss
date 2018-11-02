@@ -40,49 +40,7 @@ ul {
   }
 }
 
-.container-offset-y {
-  overflow: visible !important;
-  margin-bottom: -210px;
-
-  .child-offset-y {
-    transform: translateY(-210px);
-  }
-}
-
-// Images
-.image-offgrid {
-
-  img {
-    box-shadow: 10px 35px 45px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-  }
-
-  @include media-breakpoint-up(lg) {
-    position: absolute;
-    width: 900px;
-    top: -90px;
-
-    &.to-right {
-      right: 12px;
-    }
-  }
-}
-
-.image-absolute {
-  img {
-    box-shadow: 10px 35px 45px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-  }
-
-  @include media-breakpoint-up(md) {
-    position: absolute;
-    width: 260px;
-    top: 110px;
-    left: -48px;
-
-    &.to-right {
-      left: auto;
-      right: -48px;
-    }
-  }
+// Sections
+.section {
+  overflow: hidden;
 }
