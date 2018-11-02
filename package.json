@@ -1,7 +1,7 @@
 {
   "name": "project-bootstrap",
-  "version": "1.1.0",
-  "description": "Bootstrap project boilerplate",
+  "version": "1.2.0",
+  "description": "StanVision's boilerplate project starter",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/grunt/bin/grunt build:dev && ./node_modules/grunt/bin/grunt",
@@ -22,6 +22,7 @@
     "grunt-nunjucks-2-html": "2.2.0",
     "grunt-sass": "3.0.1",
     "imagemin-pngquant": "6.0.0",
+    "imagemin-mozjpeg": "7.0.0",
     "load-grunt-tasks": "4.0.0",
     "node-sass": "4.9.2",
     "standard": "11.0.1"

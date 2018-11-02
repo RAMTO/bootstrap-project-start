@@ -31,6 +31,8 @@ $theme-colors: (
 // Typography
 $font-family-primary: 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
+$body-color:                  $black;
+
 $font-size-base:              1rem;
 $font-family-base:            $font-family-primary;
 $line-height-base:            1.5;
@@ -109,8 +111,21 @@ $spacers: (
   13: ($spacer * 5.5),  // 88px
   14: ($spacer * 6),    // 96px
   15: ($spacer * 6.5),  // 104px
+  16: ($spacer * 7),    // 112px
+  17: ($spacer * 7.5),  // 120px
+  18: ($spacer * 8),    // 128px
+  19: ($spacer * 8.5),  // 136px
   20: ($spacer * 9),    // 144px
-  30: ($spacer * 20)    // 320px
+  21: ($spacer * 9.5),  // 162px
+  22: ($spacer * 10),   // 160px
+  23: ($spacer * 10.5), // 168px
+  24: ($spacer * 11),   // 176px
+  25: ($spacer * 11.5), // 184px
+  26: ($spacer * 12),   // 192px
+  27: ($spacer * 12.5), // 200px
+  28: ($spacer * 13),   // 208px
+  29: ($spacer * 13.5), // 216px
+  30: ($spacer * 14)    // 224px
 );
 
 // Grid
@@ -119,51 +134,30 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1440px
+  xl: 1280px
 );
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1400px
+  xl: 1128px
 );
 
 $grid-gutter-width:       24px;
 
+// UI
+$border-radius:               		3px;
+$border-radius-lg:            		5px;
+$border-radius-sm:            		2px;
+
 // Buttons
-$btn-padding-y:                 8px;
-$btn-padding-x:                 32px;
-$btn-line-height:               1.5;
-
-// $btn-padding-y-sm:            $input-btn-padding-y-sm;
-// $btn-padding-x-sm:            $input-btn-padding-x-sm;
-// $btn-line-height-sm:          $input-btn-line-height-sm;
-
-// $btn-padding-y-lg:            $input-btn-padding-y-lg;
-// $btn-padding-x-lg:            $input-btn-padding-x-lg;
-// $btn-line-height-lg:          $input-btn-line-height-lg;
-
-// $btn-border-width:            $input-btn-border-width;
-
-$btn-font-weight:                 700;
+$btn-padding-y:                   8px;
+$btn-padding-x:                   32px;
+$btn-line-height:                 1.5;
+$btn-font-weight:                 400;
 $btn-font-size:                   16px;
-// $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
-// $btn-focus-width:             $input-btn-focus-width;
-// $btn-focus-box-shadow:        $input-btn-focus-box-shadow;
-// $btn-disabled-opacity:        .65;
-// $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125);
-
-// $btn-link-disabled-color:     $gray-600;
-
-// $btn-block-spacing-y:         .5rem;
-
-// Allows for customizing button radius independently from global border radius
-$btn-border-radius:               3px;
-// $btn-border-radius-lg:        $border-radius-lg;
-// $btn-border-radius-sm:        $border-radius-sm;
-
-// $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+$btn-border-radius:               $border-radius;
 
 // Forms
 $label-margin-bottom:             2px;
@@ -178,43 +172,7 @@ $input-bg:                        transparent;
 $input-border-width:              2px;
 $input-border-radius:             0;
 
-// Tables
-$table-cell-padding:              8px;
-// $table-cell-padding-sm:       .3rem !default;
-
-// $table-bg:                    transparent !default;
-$table-accent-bg:                #f5f7fa;
-// $table-hover-bg:              rgba($black, .075) !default;
-// $table-active-bg:             $table-hover-bg !default;
-
-// $table-border-width:          $border-width !default;
-// $table-border-color:          $gray-300 !default;
-
-// $table-head-bg:               $gray-200 !default;
-// $table-head-color:            $gray-700 !default;
-
-// $table-dark-bg:               $gray-900 !default;
-// $table-dark-accent-bg:        rgba($white, .05) !default;
-// $table-dark-hover-bg:         rgba($white, .075) !default;
-// $table-dark-border-color:     lighten($gray-900, 7.5%) !default;
-// $table-dark-color:            $body-bg !default;
-
-// $table-striped-order:         odd !default;
-
-// $table-caption-color:         $text-muted !default;
-
-$menu-width:                      184px;
-$menu-breakpoint:                 xl;
-$ui-border-radius:                3px;
-
-$layout-breakpoint:               md;
-
-//** Placeholder text color
-$input-color-placeholder:         $gray;
-$input-alt-color-placeholder:   rgba(255, 255, 255, 0.5) !default;
-
-$input-padding-y-sm: .25rem !default;
-$input-padding-x-sm: .5rem !default;
-
-$input-padding-y-lg: 0.5rem !default;
-$input-padding-x-lg: 1rem !default;
+// Custom selects
+$custom-select-padding-y:         8px;
+$custom-select-line-height:       1.5;
+$custom-select-height:            auto !important;

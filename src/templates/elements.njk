@@ -5,20 +5,35 @@
 
 {% block content %}
 
-  <div class="container pt-5">
+<div class="section pt-5 pb-5 pt-md-10 pb-md-10">
+  <div class="container">
 
-    <h1 class="text-mega mb-10">Elements page</h1>
+    <h1 class="text-mega mb-10">Styleguide</h1>
 
     <h3 class="text-headline mb-3">Colors</h3>
 
-    <div class="p-3 mb-2 bg-primary text-white">Primary</div>
-    <div class="p-3 mb-2 bg-secondary text-white">Secondary</div>
-    <div class="p-3 mb-2 bg-success text-white">Success</div>
-    <div class="p-3 mb-2 bg-danger text-white">Danger</div>
-    <div class="p-3 mb-2 bg-warning text-dark">Warning</div>
-    <div class="p-3 mb-2 bg-info text-white">Info</div>
+    <div class="row mb-4">
+      <div class="col-12 col-md-2">
+        <div style="height: 64px; line-height: 64px; border-radius: 2px;" class="mb-2 bg-primary text-white text-center">Primary</div>
+      </div>
+      <div class="col-12 col-md-2">
+        <div style="height: 64px; line-height: 64px; border-radius: 2px;" class="mb-2 bg-secondary text-white text-center">Secondary</div>
+      </div>
+      <div class="col-12 col-md-2">
+        <div style="height: 64px; line-height: 64px; border-radius: 2px;" class="mb-2 bg-success text-white text-center">Success</div>
+      </div>
+      <div class="col-12 col-md-2">
+        <div style="height: 64px; line-height: 64px; border-radius: 2px;" class="mb-2 bg-danger text-white text-center">Danger</div>
+      </div>
+      <div class="col-12 col-md-2">
+        <div style="height: 64px; line-height: 64px; border-radius: 2px;" class="mb-2 bg-warning text-white text-center ">Warning</div>
+      </div>
+      <div class="col-12 col-md-2">
+        <div style="height: 64px; line-height: 64px; border-radius: 2px;" class="mb-2 bg-info text-white text-center">Info</div>
+      </div>
+    </div>
 
-    <h3 class="text-headline mb-3 mt-8">Typography</h3>
+    <h3 class="text-headline mb-3">Typography</h3>
 
     <div class="mb-4">
       <div class="d-flex align-items-center">
@@ -84,47 +99,8 @@
       <p class="small mt-2 text-light">Used for body text as project descriptions</p>
     </div>
 
-
-    {# <p class="mb-6"></p>
-
-    <p class="lead">
-      Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-    </p>
-
-    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
-    <p><del>This line of text is meant to be treated as deleted text.</del></p>
-    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-    <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-    <p><u>This line of text will render as underlined</u></p>
-    <p><small>This line of text is meant to be treated as fine print.</small></p>
-    <p><strong>This line rendered as bold text.</strong></p>
-    <p><em>This line rendered as italicized text.</em></p>
-
-    <h3 class="mb-3 mt-5">Buttons</h3>
-
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
-    <button type="button" class="btn btn-link">Link</button>
-
-    <p class="mb-3"></p>
-
-    <button type="button" class="btn btn-outline-primary">Primary</button>
-    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-    <button type="button" class="btn btn-outline-success">Success</button>
-    <button type="button" class="btn btn-outline-danger">Danger</button>
-    <button type="button" class="btn btn-outline-warning">Warning</button>
-    <button type="button" class="btn btn-outline-info">Info</button>
-    <button type="button" class="btn btn-outline-light">Light</button>
-    <button type="button" class="btn btn-outline-dark">Dark</button>
-
-    <p class="mb-3"></p> #}
+    <a class="link-primary" href="/">Back to home</a>
   </div>
-
+</div>
 
 {% endblock %}

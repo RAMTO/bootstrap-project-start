@@ -1,6 +1,7 @@
 const gruntTask = require('load-grunt-tasks')
 const sass = require('node-sass')
 const imageminPngquant = require('imagemin-pngquant')
+const imageminMozjpeg = require('imagemin-mozjpeg')
 
 module.exports = (grunt) => {
   gruntTask(grunt)
@@ -38,12 +39,19 @@ module.exports = (grunt) => {
         src: '**/*.{png,jpg,gif,ico,svg}',
         dest: 'dist/img/'
       },
+      css: {
+        expand: true,
+        cwd: 'src/css/',
+        src: '**/*.css',
+        dest: 'dist/css'
+      },
       fonts: {
         expand: true,
         cwd: 'src/fonts/',
         src: '**/*.{ttf,otf,woff,woff2}',
         dest: 'dist/fonts/'
-      }
+      },
+      fontawesome: { expand: true, cwd: 'src/', src: ['webfonts/**'], dest: 'dist' }
     },
 
     nunjucks: {
@@ -114,7 +122,7 @@ module.exports = (grunt) => {
       dynamic: {
         options: {
           optimizationLevel: 3,
-          use: [imageminPngquant({ quality: 80 })]
+          use: [imageminPngquant({ quality: 80 }), imageminMozjpeg({ quality: 80 })]
         },
         files: [{
           expand: true,
