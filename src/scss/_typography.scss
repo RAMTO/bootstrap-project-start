@@ -29,6 +29,16 @@
   font-weight: normal;
 }
 
+@mixin fontAwesome($boldness: 700) {
+	font-family: "Font Awesome 5 Free";
+	font-weight: $boldness;
+}
+
+@mixin fontAwesomeBrands($boldness: 700) {
+	font-family: "Font Awesome 5 Brands";
+	font-weight: $boldness;
+}
+
 @function texts-deep-get($map, $keys...) {
   @each $key in $keys {
     $map: map-get($map, $key);

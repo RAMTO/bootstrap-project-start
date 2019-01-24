@@ -4,14 +4,14 @@ $business-blue:         #4c84ff;
 $darkish-pink:          #e24358;
 $pale-orange:           #ffb75d;
 
-$black:                 #33343e;    // Main text
-$white:                 #ffffff;    // Header background color
+$dark:                  #33343e;    // Main text
+$white:                 #ffffff;    // Just white
 
 $slate:                 #5b6573;    // Menu item, Form labels
-$gray:                  #858c9a;    // Text light color, Input border color
+$grey:                  #858c9a;    // Text light color, Input border color
 $steel:                 #c8ccd4;    // Table border color
-$light:                 #eceff2;    // Main background color
-$pale:                  #f9fbfd;    // Panel background color
+$pale:                  #eceff2;    // Main background color
+$snow:                  #f9fbfd;    // Panel background color
 
 $primary:               $money-green;
 $secondary:             $business-blue;
@@ -22,16 +22,20 @@ $info:                  $business-blue;
 
 // Add custom colors to theme-colors map
 $theme-colors: (
-  dark: $black,
+  dark: $dark,
+  light: $grey,
+  white: $white,
   slate: $slate,
-  light: $gray,
-  white: $white
+  grey: $grey,
+  steel: $steel,
+  pale: $pale,
+  snow: $snow
 );
 
 // Typography
 $font-family-primary: 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
-$body-color:                  $black;
+$body-color:                  $dark;
 
 $font-size-base:              1rem;
 $font-family-base:            $font-family-primary;
@@ -39,54 +43,64 @@ $line-height-base:            1.5;
 $small-font-size:             14px;
 
 $texts: (
-  mega: (
+  hero: (
     default: (
-      font-size:    28px,
+      font-size:    48px,
       line-height:  1.3
     ),
     md: (
-      font-size:    32px,
-      line-height:  1.65
+      font-size:    72px,
+      line-height:  1.20
+    )
+  ),
+  mega: (
+    default: (
+      font-size:    36px,
+      line-height:  1.40
+    ),
+    md: (
+      font-size:    48px,
+      line-height:  1.25
     )
   ),
   display: (
     default: (
-      font-size:    24px,
-      line-height:  1.16
+      font-size:    28px,
+      line-height:  1.45
     ),
     md: (
-      font-size:    28px,
-      line-height:  1.5
+      font-size:    36px,
+      line-height:  1.40
     )
   ),
   headline: (
     default: (
       font-size:    20px,
-      line-height:  1.66
+      line-height:  1.45
     ),
     md: (
       font-size:    24px,
-      line-height:  1.66
+      line-height:  1.45
     )
   ),
   title: (
     default: (
       font-size:    19px,
-      line-height:  1.15
+      line-height:  1.45
     ),
     md: (
       font-size:    20px,
-      line-height:  1.7
+      line-height:  1.45
     )
   ),
   subheader: (
     default: (
       font-size:    16px,
-      line-height:  1.66
+      line-height:  1.45
     ),
     md: (
       font-size:    18px,
-      line-height:  1.66
+      line-height:  1.45
     )
   )
 );
@@ -147,32 +161,30 @@ $container-max-widths: (
 $grid-gutter-width:       24px;
 
 // UI
-$border-radius:               		3px;
-$border-radius-lg:            		5px;
-$border-radius-sm:            		2px;
+$border-radius:                   3px;
 
 // Buttons
+$btn-padding-y-lg:                10px;
+$btn-padding-x-lg:                32px;
 $btn-padding-y:                   8px;
 $btn-padding-x:                   32px;
+$btn-padding-y-sm:                6px;
+$btn-padding-x-sm:                16px;
 $btn-line-height:                 1.5;
 $btn-font-weight:                 400;
 $btn-font-size:                   16px;
 $btn-border-radius:               $border-radius;
 
 // Forms
-$label-margin-bottom:             2px;
-$input-padding-y:                 8px;
-$input-padding-x:                 12px;
+$input-color:                     $dark;
+$input-border-color:              $grey;
+$input-focus-border-color:        $primary;
+$input-focus-box-shadow:          0 0 0 1px $primary;
+$input-height:                    auto;
 $input-line-height:               1.5;
-$input-color:                     $black;
-$input-border-color:              $gray;
-$input-placeholder-color:         $gray;
-$input-focus-border-color:        $money-green;
-$input-bg:                        transparent;
-$input-border-width:              2px;
-$input-border-radius:             0;
+$input-placeholder-color:         $grey;
 
 // Custom selects
-$custom-select-padding-y:         8px;
 $custom-select-line-height:       1.5;
-$custom-select-height:            auto !important;
+$custom-select-height:            auto;
+$custom-select-focus-box-shadow:  0 0 0 1px $primary;

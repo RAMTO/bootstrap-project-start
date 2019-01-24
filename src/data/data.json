@@ -4,7 +4,7 @@
     "description": "Site description",
     "keywords": "Site keywords",
     "author": "Site keywords",
-    "favicon": "img/icons/favicon.png"
+    "favicon": "img/favicon.ico"
   },
   "fonts": [
     "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700",
