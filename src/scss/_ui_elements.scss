@@ -1,54 +1,8 @@
 // Buttons
-.btn {
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
-  text-transform: uppercase;
-  box-shadow: 0 15px 20px 0 rgba(59, 56, 73, 0.2);
-}
 
 // Tables
-.table {
-  margin-bottom: 0;
-
-  td, th {
-    padding: 4px 12px;
-    border-top: 1px solid $steel;
-
-    @include media-breakpoint-up(md) {
-      padding: 8px 24px;
-    }
-  }
-
-  th {
-    border-top: 0;
-  }
-}
-
-.table-hover {
-  tbody {
-    tr {
-      &:hover {
-        background-color: $white;
-      }
-    }
-
-    .row-gray {
-      &:hover {
-        background-color: $light;
-      }
-    }
-  }
-}
-
 .cell-numeric {
   font-variant-numeric: tabular-nums;
-}
-
-.row-gray {
-  background-color: $light;
-
-  td {
-    border-top: 0;
-  }
 }
 
 // Forms
@@ -64,37 +18,37 @@
 }
 
 .form-control {
-  font-size: 1rem;
-  padding-top: 22px;
-  padding-bottom: 14px;
-
-  &:focus {
-    &,
-    &.is-invalid {
-      box-shadow: none;
+  &.is-invalid {
+    &:focus {
+      box-shadow: 0 0 0 1px $danger;
     }
   }
 }
 
-textarea.form-control {
-  line-height: 1.4;
+// Custom controls
+.floating-form-control {
+  padding-top: 22px;
+  padding-bottom: 14px;
 }
 
-.custom-label {
-  color: $white;
-  font-size: 1rem;
+.floating-label {
   position: absolute;
-  left: 34px;
   top: 50%;
+  left: $input-padding-x;
+  margin-bottom: 0;
+  color: $grey;
+  font-size: 1rem;
+  pointer-events: none;
+
   transform: translateY(-50%);
   transform-origin: 0;
   transition: transform 0.2s;
 }
 
-.form-control:focus + .custom-label,
-.form-control:valid + .custom-label {
+.floating-form-control:focus + .floating-label,
+.floating-form-control:valid + .floating-label {
+  color: $grey;
   transform: scale(0.75) translateY(-160%);
-  color: $gray;
 }
 
 .custom-select-wrapper {
@@ -102,32 +56,29 @@ textarea.form-control {
 
   .custom-select {
     background-image: none;
-    border: 2px solid $white;
-    border-radius: 0;
-    padding: 16px 22px;
-    height: auto;
-    font-size: 1rem;
-
-    &:focus {
-      box-shadow: none;
-      border-color: $primary;
-    }
   }
 
   &:after {
+    @include fontAwesome();
     content: "\f078";
-    font-family: "Font Awesome 5 Pro";
-    font-weight: normal;
     font-size: 14px;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
     position: absolute;
     top: 50%;
     right: 8px;
     transform: translate(-50%, -50%);
-    color: $white;
+    pointer-events: none;
+    color: $grey;
   }
+}
+
+.custom-control-label {
+  cursor: pointer;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 1px $primary;
+}
+
+.was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 1px $danger;
 }

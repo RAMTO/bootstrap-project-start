@@ -1,4 +1,8 @@
 // Base & resets
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   height: 100%;
 }
@@ -17,6 +21,13 @@ ul {
   list-style: none;
 }
 
+hr {
+  margin: 0;
+  border: 0;
+  height: 1px;
+  background-color: $steel;
+}
+
 // Mixins
 @mixin flex-center {
   display: flex;
@@ -28,6 +39,25 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin text-overflow {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// Helpers
+.text-overflow {
+	@include text-overflow;
+}
+
+.ws-no-wrap {
+	white-space: nowrap;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 // Containers

@@ -27,6 +27,18 @@ module.exports = (grunt) => {
     },
 
     copy: {
+      jquery: {
+        expand: true,
+        cwd: 'node_modules/jquery/dist/',
+        src: 'jquery.min.js',
+        dest: 'dist/js/'
+      },
+      bootstrap: {
+        expand: true,
+        cwd: 'node_modules/bootstrap/dist/js/',
+        src: 'bootstrap.bundle.min.js',
+        dest: 'dist/js/'
+      },
       js: {
         expand: true,
         cwd: 'src/js/',
@@ -50,14 +62,16 @@ module.exports = (grunt) => {
         cwd: 'src/fonts/',
         src: '**/*.{ttf,otf,woff,woff2}',
         dest: 'dist/fonts/'
-      },
-      fontawesome: { expand: true, cwd: 'src/', src: ['webfonts/**'], dest: 'dist' }
+      }
     },
 
     nunjucks: {
       options: {
         data: grunt.file.readJSON('src/data/data.json'),
-        paths: 'src/templates'
+        paths: 'src/templates',
+        configureEnvironment: function (env, nunjucks) {
+          env.addGlobal('todayTimestamp', Date.now());
+        }
       },
       render: {
         files: [
@@ -75,7 +89,8 @@ module.exports = (grunt) => {
     sass: {
       options: {
         sourceMap: true,
-        implementation: sass
+        implementation: sass,
+        outputStyle: 'expanded'
       },
       dist: {
         files: {
