@@ -1,0 +1,162 @@
+// IBM Motion Easings
+$easing-standart-productive: cubic-bezier(0.2, 0, 0.38, 0.9);
+$easing-standart-expresive: cubic-bezier(0.4, 0.14, 0.3, 1);
+
+$easing-entrance-productive: cubic-bezier(0, 0, 0.38, 0.9);
+$easing-entrance-expresive: cubic-bezier(0, 0, 0.3, 1);
+
+$easing-exit-productive: cubic-bezier(0.2, 0, 1, 0.9);
+$easing-exit-expresive: cubic-bezier(0.4, 0.14, 1, 1);
+
+// GSAP Motions Easings
+$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+$easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Custom
+$power4: cubic-bezier(0.115, 0.87, 0.19, 1);
+$power3: cubic-bezier(0.26, 0.67, 0.5, 0.8);
+$expoBounceIn: cubic-bezier(0, 1.15, 0.46, 1.17);
+
+// Durations
+$duration-section-transform: 1000ms;
+$duration-element-transform: 500ms;
+$duration-element-opacity: 500ms;
+
+// Animations
+@keyframes scale-shrink {
+  0% {
+    transform: scaleY(0);
+  }
+
+  29% {
+    transform: scaleY(1);
+    transform-origin: 0 100%;
+  }
+
+  30% {
+    transform: scaleY(1);
+    transform-origin: 0 0;
+  }
+
+  80% {
+    transform: scaleY(0);
+    transform-origin: 0 0;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: 0 0;
+  }
+}
+
+// Mixins
+@mixin staggered_delays($nth: 0, $items: 9, $initial: 0, $step: 150) {
+  @for $i from $nth through $items {
+    &.d-#{$i} {
+      transition-delay: #{$initial}ms;
+    }
+    $initial: $initial + $step;
+  }
+}
+
+// Universal animations classes
+.section-transform {
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0 0;
+
+  transition: transform $duration-section-transform $easing-standart-expresive;
+  @include staggered_delays($initial: 800);
+
+  &.from-right {
+    transform-origin: 100% 0;
+  }
+
+  &.from-top {
+    transform: scale3d(1, 0, 1);
+  }
+
+  .section-transform-opacity {
+    opacity: 0;
+    transition: opacity 0s $duration-section-transform;
+  }
+
+  // Animate state
+  &.animate {
+    transform: scale3d(1, 1, 1);
+
+    .section-transform-opacity {
+      opacity: 1;
+    }
+  }
+}
+
+// Element animations
+.element-transform-translate {
+  transform: translate3d(0, 100%, 0);
+
+  transition: transform $duration-element-transform $easing-entrance-productive
+    $duration-section-transform;
+
+  @include staggered_delays($initial: 800);
+
+  .animate & {
+    transform: translate3d(0, 0%, 0);
+  }
+}
+
+.element-transform-scale {
+  transform: scale3d(0, 0, 1);
+
+  transition: transform $duration-element-transform $easing-entrance-productive
+    $duration-section-transform;
+
+  @include staggered_delays($initial: 800);
+
+  .animate & {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.element-transform-opacity {
+  opacity: 0;
+  transform: translate3d(0, 10%, 0);
+
+  transition: opacity $duration-element-opacity linear $duration-section-transform,
+    transform $duration-element-transform $easing-entrance-productive $duration-section-transform;
+
+  @include staggered_delays($initial: 800);
+
+  .animate & {
+    opacity: 1;
+    transform: translate3d(0, 0%, 0);
+  }
+}

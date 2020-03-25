@@ -1,10 +1,11 @@
 {
   "meta": {
-    "title": "Boostrap Project Start",
+    "title": "Bootstrap Project Start",
     "description": "Site description",
     "keywords": "Site keywords",
-    "author": "Site keywords",
-    "favicon": "img/favicon.ico"
+    "author": "Martin Dobrev",
+    "favicon": "img/favicon.ico",
+    "baseUrl": ""
   },
   "fonts": [
     "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700",

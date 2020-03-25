@@ -1,5 +1,8 @@
-@import 'variables';
-@import 'node_modules/bootstrap/scss/bootstrap';
-@import 'typography';
-@import 'layout';
-@import 'ui_elements';
+@import "variables";
+@import "bootstrap";
+@import "mixins";
+@import "typography";
+@import "layout";
+@import "menu";
+@import "ui_elements";
+@import "animations";

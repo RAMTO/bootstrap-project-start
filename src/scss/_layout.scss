@@ -1,13 +1,22 @@
 // Base & resets
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
-  height: 100%;
+html,
+body {
+  min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -28,32 +37,13 @@ hr {
   background-color: $steel;
 }
 
-// Mixins
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin inline-flex-center {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin text-overflow {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
 // Helpers
 .text-overflow {
-	@include text-overflow;
+  @include text-overflow;
 }
 
 .ws-no-wrap {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 .flex-1 {
@@ -61,6 +51,16 @@ hr {
 }
 
 // Containers
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1 0 100%;
+}
+
 .container {
   padding-left: 16px;
   padding-right: 16px;

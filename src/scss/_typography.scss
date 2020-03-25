@@ -1,61 +1,38 @@
 // Fonts
 @font-face {
-  font-family: 'Google Sans';
-  src: url('../fonts/googlesans-bold-webfont.woff2') format('woff2'),
-        url('../fonts/googlesans-bold-webfont.woff') format('woff');
+  font-family: "Google Sans";
+  src: url("../fonts/googlesans-bold-webfont.woff2") format("woff2"),
+    url("../fonts/googlesans-bold-webfont.woff") format("woff");
   font-display: swap;
   font-weight: 900;
 }
 
 @font-face {
-  font-family: 'Google Sans';
-  src: url('../fonts/googlesans-medium-webfont.woff2') format('woff2'),
-        url('../fonts/googlesans-medium-webfont.woff') format('woff');
+  font-family: "Google Sans";
+  src: url("../fonts/googlesans-medium-webfont.woff2") format("woff2"),
+    url("../fonts/googlesans-medium-webfont.woff") format("woff");
   font-display: swap;
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Google Sans';
-  src: url('../fonts/googlesans-regular-webfont.woff2') format('woff2'),
-        url('../fonts/googlesans-regular-webfont.woff') format('woff');
+  font-family: "Google Sans";
+  src: url("../fonts/googlesans-regular-webfont.woff2") format("woff2"),
+    url("../fonts/googlesans-regular-webfont.woff") format("woff");
   font-display: swap;
   font-weight: 400;
-}
-
-// Mixins and functions
-@mixin text() {
-  font-family: $font-family-primary;
-  font-weight: normal;
-}
-
-@mixin fontAwesome($boldness: 700) {
-	font-family: "Font Awesome 5 Free";
-	font-weight: $boldness;
-}
-
-@mixin fontAwesomeBrands($boldness: 700) {
-	font-family: "Font Awesome 5 Brands";
-	font-weight: $boldness;
-}
-
-@function texts-deep-get($map, $keys...) {
-  @each $key in $keys {
-    $map: map-get($map, $key);
-  }
-  @return $map;
 }
 
 // Classes
 @each $size in map-keys($texts) {
   .text-#{$size} {
     @include text;
-    font-size: texts-deep-get($texts, $size, 'default', 'font-size');
-    line-height: texts-deep-get($texts, $size, 'default', 'line-height');
+    font-size: texts-deep-get($texts, $size, "default", "font-size");
+    line-height: texts-deep-get($texts, $size, "default", "line-height");
 
     @include media-breakpoint-up(md) {
-      font-size: texts-deep-get($texts, $size, 'md', 'font-size');
-      line-height: texts-deep-get($texts, $size, 'md', 'line-height');
+      font-size: texts-deep-get($texts, $size, "md", "font-size");
+      line-height: texts-deep-get($texts, $size, "md", "line-height");
     }
   }
 }
@@ -64,21 +41,49 @@
 
 // Links
 .link {
+  @include custom-underline($body-color);
+
   color: $body-color;
   text-decoration: none;
 
   &:hover {
     color: $body-color;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
 .link-primary {
+  @include custom-underline($primary);
+
   color: $primary;
   text-decoration: none;
 
   &:hover {
     color: $primary;
-    text-decoration: underline;
+    text-decoration: none;
+  }
+}
+
+.link-stan-vision {
+  @include transition-link;
+
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  color: $slate;
+  text-decoration: none;
+
+  #logo {
+    fill: $slate;
+    transition: fill 0.15s linear;
+  }
+
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+
+    #logo {
+      fill: $primary;
+    }
   }
 }

@@ -1,4 +1,261 @@
 // Buttons
+@mixin button-variant(
+  $background,
+  $color,
+  $color-hover,
+  $border,
+  $hover-background: darken($background, 7.5%),
+  $hover-border: darken($border, 10%),
+  $active-background: darken($background, 10%),
+  $active-border: darken($border, 12.5%)
+) {
+  color: $color;
+  @include gradient-bg($background);
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
+
+  @include hover {
+    color: $color-hover;
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+  }
+
+  &:focus,
+  &.focus {
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: $btn-box-shadow,
+        0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), 0.5);
+    } @else {
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), 0.5);
+    }
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $color;
+    background-color: $active-background;
+    @if $enable-gradients {
+      background-image: none; // Remove the gradient for the pressed/active state
+    }
+    border-color: $active-border;
+
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        box-shadow: $btn-active-box-shadow,
+          0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), 0.5);
+      } @else {
+        box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), 0.5);
+      }
+    }
+  }
+}
+
+@mixin button-outline-variant(
+  $color,
+  $color-hover,
+  $active-background: $color,
+  $active-border: $color
+) {
+  color: $color;
+  border-color: $color;
+
+  @include hover {
+    color: $color-hover;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: color-yiq($active-background);
+    background-color: $active-background;
+    border-color: $active-border;
+
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, 0.5);
+      } @else {
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  white-space: nowrap;
+  @include button-size(
+    $btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $btn-line-height,
+    $btn-border-radius
+  );
+  @include transition($btn-transition);
+
+  @include hover {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $btn-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $btn-color, $btn-color-hover, $value);
+  }
+}
+
+@each $color, $value in $btn-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value, $btn-outline-color-hover);
+  }
+}
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $btn-line-height-lg,
+    $btn-border-radius-lg
+  );
+}
+
+.btn-sm {
+  @include button-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $btn-line-height-sm,
+    $btn-border-radius-sm
+  );
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  &.btn-block {
+    width: 100%;
+  }
+}
 
 // Tables
 .cell-numeric {
@@ -79,6 +336,59 @@
   box-shadow: 0 0 0 1px $primary;
 }
 
-.was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
+.was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before,
+.custom-control-input.is-invalid:focus ~ .custom-control-label::before {
   box-shadow: 0 0 0 1px $danger;
+}
+
+// Icons
+.icon-social {
+  @include transition-link;
+
+  font-size: 24px;
+  color: $grey;
+  margin: 0 16px;
+
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin: 0 32px 0 0;
+  }
+}
+
+// Accordions
+.accordion-trigger {
+  cursor: pointer;
+
+  &:before {
+    @include fontAwesome;
+    content: "\f068";
+    font-size: 18px;
+    color: $primary;
+    margin-right: 8px;
+  }
+
+  &.collapsed {
+    &:before {
+      content: "\f067";
+    }
+  }
+}
+
+// Lists
+.list-icon {
+  li {
+    @include list-icon("\f00c", 700, 16px, $primary);
+  }
+}
+
+// Separators
+.separator {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-color: $grey;
 }
