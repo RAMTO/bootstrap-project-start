@@ -3,24 +3,24 @@ const sass = require('node-sass');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
-module.exports = grunt => {
+module.exports = (grunt) => {
   jitGrunt(grunt, {
-    nunjucks: 'grunt-nunjucks-2-html'
+    nunjucks: 'grunt-nunjucks-2-html',
   });
 
   grunt.initConfig({
     browserSync: {
       bsFiles: {
-        src: ['dist/**/*.css', 'dist/**/*.html', 'dist/**/*.js']
+        src: ['dist/**/*.css', 'dist/**/*.html', 'dist/**/*.js'],
       },
       options: {
         watchTask: true,
         port: 3333,
         reloadDebounce: 2000,
         server: {
-          baseDir: 'dist'
-        }
-      }
+          baseDir: 'dist',
+        },
+      },
     },
 
     babel: {
@@ -29,8 +29,8 @@ module.exports = grunt => {
         presets: ['@babel/preset-env'],
         plugins: [
           '@babel/plugin-transform-classes',
-          'transform-class-constructor-call'
-        ]
+          'transform-class-constructor-call',
+        ],
       },
       dist: {
         files: [
@@ -38,10 +38,10 @@ module.exports = grunt => {
             expand: true,
             cwd: 'src/js',
             src: '**/*.js',
-            dest: 'dist/js'
-          }
-        ]
-      }
+            dest: 'dist/js',
+          },
+        ],
+      },
     },
 
     copy: {
@@ -49,59 +49,53 @@ module.exports = grunt => {
         expand: true,
         cwd: 'node_modules/jquery/dist/',
         src: 'jquery.min.js',
-        dest: 'dist/js/'
-      },
-      waypoints: {
-        expand: true,
-        cwd: 'node_modules/waypoints/lib/',
-        src: 'jquery.waypoints.js',
-        dest: 'dist/js/'
+        dest: 'dist/js/',
       },
       bootstrap: {
         expand: true,
         cwd: 'node_modules/bootstrap/dist/js/',
         src: 'bootstrap.bundle.min.js',
-        dest: 'dist/js/'
+        dest: 'dist/js/',
       },
       img: {
         expand: true,
         cwd: 'src/img/',
         src: '**/*.{png,jpg,gif,ico,svg}',
-        dest: 'dist/img/'
+        dest: 'dist/img/',
       },
       css: {
         expand: true,
         cwd: 'src/css/',
         src: '**/*.css',
-        dest: 'dist/css'
+        dest: 'dist/css',
       },
       fonts: {
         expand: true,
         cwd: 'src/fonts/',
         src: '**/*.{ttf,otf,woff,woff2}',
-        dest: 'dist/fonts/'
+        dest: 'dist/fonts/',
       },
       fontawesome: {
         expand: true,
         cwd: 'node_modules/@fortawesome/fontawesome-free',
         src: ['webfonts/**'],
-        dest: 'dist'
+        dest: 'dist',
       },
       fontawesomeCSS: {
         expand: true,
         cwd: 'node_modules/@fortawesome/fontawesome-free',
         src: ['css/all.min.css'],
-        dest: 'dist'
-      }
+        dest: 'dist',
+      },
     },
 
     nunjucks: {
       options: {
         data: grunt.file.readJSON('src/data/data.json'),
         paths: 'src/templates',
-        configureEnvironment: function(env, nunjucks) {
+        configureEnvironment: function (env, nunjucks) {
           env.addGlobal('todayTimestamp', Date.now());
-        }
+        },
       },
       render: {
         files: [
@@ -110,48 +104,48 @@ module.exports = grunt => {
             cwd: 'src/templates/',
             src: '*.njk',
             dest: 'dist/',
-            ext: '.html'
-          }
-        ]
-      }
+            ext: '.html',
+          },
+        ],
+      },
     },
 
     sass: {
       options: {
         sourceMap: true,
         implementation: sass,
-        outputStyle: 'expanded'
+        outputStyle: 'expanded',
       },
       dist: {
         files: {
-          'dist/css/style.css': 'src/scss/style.scss'
-        }
-      }
+          'dist/css/style.css': 'src/scss/style.scss',
+        },
+      },
     },
 
     autoprefixer: {
       dist: {
         files: {
-          'dist/css/style.css': 'dist/css/style.css'
-        }
-      }
+          'dist/css/style.css': 'dist/css/style.css',
+        },
+      },
     },
 
     htmlmin: {
       dist: {
         options: {
           removeComments: true,
-          collapseWhitespace: true
+          collapseWhitespace: true,
         },
         files: [
           {
             expand: true,
             cwd: 'dist',
             src: '**/*.html',
-            dest: 'dist/'
-          }
-        ]
-      }
+            dest: 'dist/',
+          },
+        ],
+      },
     },
 
     cssmin: {
@@ -161,15 +155,15 @@ module.exports = grunt => {
             expand: true,
             cwd: 'dist/css',
             src: ['*.css'],
-            dest: 'dist/css'
-          }
-        ]
-      }
+            dest: 'dist/css',
+          },
+        ],
+      },
     },
 
     uglify: {
       options: {
-        mangle: false
+        mangle: false,
       },
       my_target: {
         files: [
@@ -177,10 +171,10 @@ module.exports = grunt => {
             expand: true,
             cwd: 'dist/js',
             src: '**/*.js',
-            dest: 'dist/js'
-          }
-        ]
-      }
+            dest: 'dist/js',
+          },
+        ],
+      },
     },
 
     imagemin: {
@@ -189,49 +183,49 @@ module.exports = grunt => {
           optimizationLevel: 3,
           use: [
             imageminPngquant({ quality: 80 }),
-            imageminMozjpeg({ quality: 80 })
-          ]
+            imageminMozjpeg({ quality: 80 }),
+          ],
         },
         files: [
           {
             expand: true,
             cwd: 'src/',
             src: ['**/*.{png,jpg,gif}'],
-            dest: 'dist/'
-          }
-        ]
-      }
+            dest: 'dist/',
+          },
+        ],
+      },
     },
 
     watch: {
       data: {
         files: 'src/data/data.json',
-        tasks: ['nunjucks']
+        tasks: ['nunjucks'],
       },
       templates: {
         files: 'src/**/*.njk',
-        tasks: ['nunjucks']
+        tasks: ['nunjucks'],
       },
       css: {
         files: 'src/**/*.scss',
-        tasks: ['sass', 'autoprefixer']
+        tasks: ['sass', 'autoprefixer'],
       },
       javascript: {
         files: ['src/**/*.js'],
-        tasks: ['babel']
+        tasks: ['babel'],
       },
       img: {
         files: 'src/**/*.{png,jpg,gif,ico,svg}',
-        tasks: ['copy:img']
-      }
-    }
+        tasks: ['copy:img'],
+      },
+    },
   });
 
   grunt.registerTask('common_prod', [
     'htmlmin',
     'cssmin',
     'uglify',
-    'imagemin'
+    'imagemin',
   ]);
 
   grunt.registerTask('build:prod', [
@@ -240,7 +234,7 @@ module.exports = grunt => {
     'babel',
     'sass',
     'autoprefixer',
-    'common_prod'
+    'common_prod',
   ]);
 
   grunt.registerTask('build:dev', [
@@ -248,7 +242,7 @@ module.exports = grunt => {
     'copy',
     'babel',
     'sass',
-    'autoprefixer'
+    'autoprefixer',
   ]);
 
   grunt.registerTask('default', ['browserSync', 'watch']);

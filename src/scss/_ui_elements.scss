@@ -247,12 +247,8 @@ fieldset:disabled a.btn {
   }
 }
 
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button {
-  &.btn-block {
+@include media-breakpoint-down(xs) {
+  .btn-block-sm {
     width: 100%;
   }
 }
@@ -390,5 +386,5 @@ button {
   border: 0;
   height: 1px;
   width: 100%;
-  background-color: $grey;
+  background-color: $steel;
 }

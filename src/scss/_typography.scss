@@ -38,6 +38,10 @@
 }
 
 // Custom styles
+.text-label {
+  font-weight: $font-weight-medium;
+  margin-bottom: 4px;
+}
 
 // Links
 .link {
@@ -61,29 +65,5 @@
   &:hover {
     color: $primary;
     text-decoration: none;
-  }
-}
-
-.link-stan-vision {
-  @include transition-link;
-
-  display: inline-block;
-  line-height: 28px;
-  font-size: 13px;
-  color: $slate;
-  text-decoration: none;
-
-  #logo {
-    fill: $slate;
-    transition: fill 0.15s linear;
-  }
-
-  &:hover {
-    color: $primary;
-    text-decoration: none;
-
-    #logo {
-      fill: $primary;
-    }
   }
 }
