@@ -4,7 +4,7 @@ const $toggleMenu = $('.js-toggle-menu');
 const $scrollTo = $('.js-scroll-to');
 
 // Functions
-const toggleSub = function(e) {
+const toggleSub = function (e) {
   e.preventDefault();
   const $this = $(this);
   const $parent = $this.closest('li');
@@ -12,7 +12,7 @@ const toggleSub = function(e) {
   $parent.toggleClass('is-open-sub');
 };
 
-const toggleMenu = function(e) {
+const toggleMenu = function (e) {
   e.preventDefault();
   const $this = $(this);
   const $parent = $('html');
@@ -20,7 +20,7 @@ const toggleMenu = function(e) {
   $parent.toggleClass('is-open-menu');
 };
 
-const scrollToElement = function(event) {
+const scrollToElement = function (event) {
   if (
     location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
     location.hostname == this.hostname
@@ -36,17 +36,17 @@ const scrollToElement = function(event) {
       $('html, body').animate(
         {
           scrollTop:
-            target.offset().top - $('.container-sticky').innerHeight() - 50
+            target.offset().top - $('.container-sticky').innerHeight() - 50,
         },
         1000,
-        function() {}
+        function () {}
       );
     }
   }
 };
 
 // Bind events & init plugins
-$(document).ready(function() {
+$(document).ready(function () {
   // Make check for mobile!
   $toggleSub.on('click', toggleSub);
   $toggleMenu.on('click', toggleMenu);

@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>{{ pageTitle }}</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="{{ pageDescription }}">
-    <meta name="keywords" content="{{ pageKeywords }}">
-    <meta name="author" content="{{ meta.author }}">
+  <title>{{ pageTitle }}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{{ pageDescription }}">
+  <meta name="keywords" content="{{ pageKeywords }}">
+  <meta name="author" content="{{ meta.author }}">
 
-    <!-- Open Graph meta -->
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ meta.title }}">
-    <meta property="og:description" content="{{ meta.description }}">
-    <meta property="og:image" content="" />
-    <!-- Open Graph meta -->
+  <!-- Open Graph meta -->
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ meta.title }}">
+  <meta property="og:description" content="{{ meta.description }}">
+  <meta property="og:image" content="" />
+  <!-- Open Graph meta -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
 
-    <link rel="canonical" href="{{ meta.baseUrl }}{{ pageCanonical }}">
+  <link rel="canonical" href="{{ meta.baseUrl }}{{ pageCanonical }}">
 
-    <link rel="preload" href="fonts/googlesans-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/googlesans-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/googlesans-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/googlesans-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/googlesans-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/googlesans-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
 
-    {% for font in fonts %}
-    <link href="{{ font }}" rel="stylesheet">
-    {% endfor %}
+  {% for font in fonts %}
+  <link href="{{ font }}" rel="stylesheet">
+  {% endfor %}
 
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/all.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css?{{ todayTimestamp }}">
-    <!-- Styles -->
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/all.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css?{{ todayTimestamp }}">
+  <!-- Styles -->
 </head>
 
 <body class="{{ pageClass }}">
@@ -42,20 +43,20 @@
   <!-- Wrapper -->
   <div class="wrapper">
 
-  <!-- Header -->
-  {% include 'partials/_menu.njk' %}
-  <!-- Header -->
+    <!-- Header -->
+    {% include 'partials/_menu.njk' %}
+    <!-- Header -->
 
-  <!-- Main -->
-  <main class="main">
-  {% block content %}
-  {% endblock %}
-  </main>
-  <!-- Main -->
+    <!-- Main -->
+    <main class="main">
+      {% block content %}
+      {% endblock %}
+    </main>
+    <!-- Main -->
 
-  <!-- Footer -->
-  {% include 'partials/_footer.njk' %}
-  <!-- Footer -->
+    <!-- Footer -->
+    {% include 'partials/_footer.njk' %}
+    <!-- Footer -->
 
   </div>
   <!-- Wrapper -->
