@@ -14,7 +14,7 @@
     "@babel/core": "7.9.0",
     "@babel/plugin-transform-classes": "7.9.2",
     "@babel/preset-env": "7.9.0",
-    "@fortawesome/fontawesome-free": "5.13.0",
+    "@fortawesome/fontawesome-free": "5.14.0",
     "babel-plugin-transform-class-constructor-call": "6.24.1",
     "grunt": "1.1.0",
     "grunt-autoprefixer": "3.0.4",
@@ -34,7 +34,7 @@
     "node-sass": "4.13.1"
   },
   "dependencies": {
-    "bootstrap": "4.4.1",
+    "bootstrap": "4.5.0",
     "jquery": "3.5.0",
     "popper.js": "1.16.1"
   }
