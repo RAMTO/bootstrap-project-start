@@ -67,3 +67,15 @@
     text-decoration: none;
   }
 }
+
+.link-secondary {
+  @include custom-underline($secondary);
+
+  color: $secondary;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary;
+    text-decoration: none;
+  }
+}

@@ -11,31 +11,31 @@
   "author": "Martin Dobrev",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "7.9.0",
-    "@babel/plugin-transform-classes": "7.9.2",
-    "@babel/preset-env": "7.9.0",
-    "@fortawesome/fontawesome-free": "5.14.0",
+    "@babel/core": "7.11.0",
+    "@babel/plugin-transform-classes": "7.10.4",
+    "@babel/preset-env": "7.11.0",
+    "@fortawesome/fontawesome-free": "5.15.1",
     "babel-plugin-transform-class-constructor-call": "6.24.1",
-    "grunt": "1.1.0",
+    "grunt": "1.2.1",
     "grunt-autoprefixer": "3.0.4",
     "grunt-babel": "8.0.0",
     "grunt-browser-sync": "2.2.0",
     "grunt-contrib-copy": "1.0.0",
     "grunt-contrib-cssmin": "3.0.0",
     "grunt-contrib-htmlmin": "3.1.0",
-    "grunt-contrib-imagemin": "3.1.0",
-    "grunt-contrib-uglify": "4.0.1",
+    "grunt-contrib-imagemin": "4.0.0",
+    "grunt-contrib-uglify": "5.0.0",
     "grunt-contrib-watch": "1.1.0",
     "grunt-nunjucks-2-html": "2.2.0",
     "grunt-sass": "3.1.0",
-    "imagemin-mozjpeg": "8.0.0",
-    "imagemin-pngquant": "8.0.0",
+    "imagemin-mozjpeg": "9.0.0",
+    "imagemin-pngquant": "9.0.0",
     "jit-grunt": "0.10.0",
-    "node-sass": "4.13.1"
+    "node-sass": "4.14.1"
   },
   "dependencies": {
-    "bootstrap": "4.5.0",
-    "jquery": "3.5.0",
+    "bootstrap": "4.5.3",
+    "jquery": "3.5.1",
     "popper.js": "1.16.1"
   }
 }
