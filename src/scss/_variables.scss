@@ -100,6 +100,7 @@ $font-weight-light:           300;
 $font-weight-normal:          400;
 $font-weight-semi-bold:       500;
 $font-weight-bold:            700;
+$font-weight-bolder:          $font-weight-bold;
 
 $font-weight-base:            $font-weight-normal;
 
@@ -225,11 +226,6 @@ $btn-font-size:                   16px;
 $btn-border-radius:               $border-radius;
 $btn-transition:                  color .15s linear, background-color .15s linear, border-color .15s linear, box-shadow .15s linear;
 
-// Custom btn variables
-$btn-color:                       $white;
-$btn-color-hover:                 $white;
-$btn-outline-color-hover:         $white;
-
 // Forms
 $input-color:                     $dark;
 $input-border-color:              $grey;
@@ -239,6 +235,8 @@ $input-height:                    auto;
 $input-line-height:               1.5;
 $input-placeholder-color:         $grey;
 $form-group-margin-bottom:        0;
+
+$form-select-indicator:           none;
 
 // Custom selects
 $custom-select-line-height:       1.5;

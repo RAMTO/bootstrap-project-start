@@ -15,14 +15,6 @@
   }
 }
 
-.form-control {
-  &.is-invalid {
-    &:focus {
-      box-shadow: 0 0 0 1px $danger;
-    }
-  }
-}
-
 // Custom controls
 .floating-form-control {
   padding-top: 22px;
@@ -86,6 +78,7 @@
 .icon-social {
   @include transition-link;
 
+  text-decoration: none;
   font-size: 24px;
   color: $grey;
   margin: 0 16px;
@@ -97,25 +90,6 @@
 
   @include media-breakpoint-up(md) {
     margin: 0 32px 0 0;
-  }
-}
-
-// Accordions
-.accordion-trigger {
-  cursor: pointer;
-
-  &:before {
-    @include fontAwesome;
-    content: "\f068";
-    font-size: 18px;
-    color: $primary;
-    margin-right: 8px;
-  }
-
-  &.collapsed {
-    &:before {
-      content: "\f067";
-    }
   }
 }
 
