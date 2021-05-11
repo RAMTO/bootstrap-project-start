@@ -10,31 +10,10 @@ body {
   min-height: 100vh;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-strong {
-  font-weight: 500;
-}
-
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-hr {
-  margin: 0;
-  border: 0;
-  height: 1px;
-  background-color: $steel;
 }
 
 // Helpers
