@@ -238,9 +238,6 @@ module.exports = (grunt) => {
   ]);
 
   grunt.registerTask('build:dev', [
-    'nunjucks',
-    'copy',
-    'babel',
     'sass',
     'autoprefixer',
   ]);
