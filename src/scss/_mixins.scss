@@ -1,90 +1,39 @@
-// Typography Mixins and functions
-@mixin text() {
-  font-family: $font-family-primary;
-  font-weight: normal;
-}
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
 
-@mixin fontAwesome($boldness: 700) {
-  font-family: "Font Awesome 5 Free";
-  font-weight: $boldness;
-}
+// Deprecate
+@import "mixins/deprecate";
 
-@mixin fontAwesomeBrands($boldness: 700) {
-  font-family: "Font Awesome 5 Brands";
-  font-weight: $boldness;
-}
+// Helpers
+@import "mixins/breakpoints";
+@import "mixins/color-scheme";
+@import "mixins/image";
+@import "mixins/resize";
+@import "mixins/visually-hidden";
+@import "mixins/reset-text";
+@import "mixins/text-truncate";
 
-@mixin text-overflow {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+// Utilities
+@import "mixins/utilities";
 
-@function texts-deep-get($map, $keys...) {
-  @each $key in $keys {
-    $map: map-get($map, $key);
-  }
-  @return $map;
-}
+// Components
+@import "mixins/alert";
+@import "mixins/buttons";
+@import "mixins/caret";
+@import "mixins/pagination";
+@import "mixins/lists";
+@import "mixins/list-group";
+@import "mixins/forms";
+@import "mixins/table-variants";
 
-// Layout Mixins
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// Skins
+@import "mixins/border-radius";
+@import "mixins/box-shadow";
+@import "mixins/gradients";
+@import "mixins/transition";
 
-@mixin inline-flex-center {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-// UI Mixins
-@mixin list-icon($icon, $boldness, $size, $color) {
-  position: relative;
-  padding-left: $size * 1.5;
-
-  &:before {
-    @include fontAwesome($boldness);
-    content: $icon;
-    font-size: $size;
-    color: $color;
-    position: absolute;
-    left: 0;
-  }
-}
-
-// Transition mixins
-@mixin transition-link {
-  transition: color 0.15s linear;
-}
-
-@mixin transition-section {
-  transition: background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
-}
-
-@mixin custom-underline($color) {
-  position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background: $color;
-    visibility: hidden;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: 0.1s linear;
-  }
-
-  &:hover {
-    &:before {
-      visibility: visible;
-      transform: scaleX(1);
-    }
-  }
-}
+// Layout
+@import "mixins/clearfix";
+@import "mixins/container";
+@import "mixins/grid";
