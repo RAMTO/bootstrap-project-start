@@ -1,20 +1,20 @@
 // Colors
 $royal-purple:          #6812a1;
 $money-green:           #00aa6e;
-$business-blue:         #4c84ff;
+$business-blue:         rgb(33, 114, 229);
 $darkish-pink:          #e24358;
 $pale-orange:           #ffb75d;
 
 $dark:                  #33343e;
 $white:                 #ffffff;
 
-$slate:                 #5b6573;
+$slate:                 rgb(33, 36, 41);
 $grey:                  #858c9a;
 $steel:                 #c8ccd4;
 $pale:                  #eceff2;
 $snow:                  #f9fbfd;
 
-$primary:               $royal-purple;
+$primary:               $business-blue;
 $secondary:             $grey;
 $success:               $money-green;
 $danger:                $darkish-pink;
@@ -78,8 +78,8 @@ $spacers: (
 );
 
 // Body
-$body-bg:                   $white;
-$body-color:                $dark;
+$body-bg:                   $slate;
+$body-color:                $white;
 
 // Paragraphs
 $paragraph-margin-bottom:   0;
@@ -91,7 +91,7 @@ $grid-gutter-width:               24px;
 $border-radius:                   3px;
 
 // Typography
-$font-family-primary: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family-primary: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
 $font-family-base:            $font-family-primary;
 $font-size-base:              1rem;
@@ -218,16 +218,16 @@ $btn-padding-y-lg:                10px;
 $btn-padding-x-lg:                32px;
 $btn-padding-y:                   8px;
 $btn-padding-x:                   32px;
-$btn-padding-y-sm:                6px;
-$btn-padding-x-sm:                16px;
+$btn-padding-y-sm:                8px;
+$btn-padding-x-sm:                8px;
 $btn-line-height:                 1.5;
-$btn-font-weight:                 400;
-$btn-font-size:                   16px;
-$btn-border-radius:               $border-radius;
+$btn-font-weight:                 500;
+$btn-font-size:                   24px;
+$btn-border-radius:               16px;
 $btn-transition:                  color .15s linear, background-color .15s linear, border-color .15s linear, box-shadow .15s linear;
 
 // Forms
-$input-color:                     $dark;
+$input-color:                     $white;
 $input-border-color:              $grey;
 $input-focus-border-color:        $primary;
 $input-focus-box-shadow:          0 0 0 1px $primary;

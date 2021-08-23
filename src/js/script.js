@@ -1,15 +1,14 @@
-// Variables
-var $form1 = $('#form1');
+(async function () {
+  const Web3Modal = window.Web3Modal.default;
+  const providerOptions = {
+    /* See Provider Options Section */
+  };
 
-// Functions
-function handleFormSubmit(e) {
-  e.preventDefault();
+  const web3Modal = new Web3Modal({
+    network: 'mainnet', // optional
+    cacheProvider: true, // optional
+    providerOptions, // required
+  });
 
-  var $this = $(this);
-  console.log('Form submitted');
-}
-
-// Bind events & init plugins
-$(document).ready(function () {
-  $form1.on('submit', handleFormSubmit);
-});
+  const provider = await web3Modal.connect();
+})();

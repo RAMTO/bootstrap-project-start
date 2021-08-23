@@ -13,7 +13,7 @@
   "devDependencies": {
     "@babel/core": "7.14.0",
     "@babel/plugin-transform-classes": "7.13.0",
-    "@babel/preset-env": "7.14.1",
+    "@babel/preset-env": "7.15.0",
     "@fortawesome/fontawesome-free": "5.15.3",
     "babel-plugin-transform-class-constructor-call": "6.24.1",
     "grunt": "1.4.0",
@@ -36,6 +36,7 @@
   "dependencies": {
     "bootstrap": "5.1.0",
     "jquery": "3.6.0",
-    "popper.js": "1.16.1"
+    "popper.js": "1.16.1",
+    "web3modal": "1.9.4"
   }
 }
