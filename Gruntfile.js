@@ -1,5 +1,5 @@
 const jitGrunt = require('jit-grunt');
-const sass = require('node-sass');
+const sass = require('sass');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
