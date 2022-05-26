@@ -16,7 +16,7 @@
     "@babel/preset-env": "7.16.11",
     "@fortawesome/fontawesome-free": "6.0.0",
     "babel-plugin-transform-class-constructor-call": "6.24.1",
-    "grunt": "1.4.1",
+    "grunt": "1.5.3",
     "grunt-autoprefixer": "3.0.4",
     "grunt-babel": "8.0.0",
     "grunt-browser-sync": "2.2.0",
